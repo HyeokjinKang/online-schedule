@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20KR:200,400,700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6F6F6;
+  font-family: 'Noto Sans KR', '나눔바른고딕', Arial;
+  letter-spacing: -2px;
+}
+
+table {
+  width: 100%;
+  height: 80%;
+}
+
+a {
+  color: #90BAEB;
+}
+
+#dropdownContainer {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+}
+
+#classSelector {
+  background: none;
+  width: 7vw;
+  height: 4vh;
+  font-size: 1.5vh;
+  border: 2px solid #999;
+  color: #999;
+  border-radius: 5px;
+}
+
+#titleContainer {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#tableContainer {
+  margin-top: 3vh;
+  width: 100vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#tableInnerContainer {
+  color: #666;
+  font-weight: 700;
+  font-size: 3vh;
+  padding: 2vw;
+  width: 30vw;
+  height: 65vh;
+  background-color: #FFF;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 15px rgba(0,0,0,0.1));
+}
+
+#title {
+  margin: 0;
+  font-size: 6vh;
+  background: linear-gradient(to right bottom, #90BAEB, #ACA9F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#explanation {
+  color: #666;
+  margin: 0;
+}
+
+.schedule {
+  text-align: right;
+}
+
+.time {
+  color: #A8A8A8;
+}
+
+.selected {
+  background: linear-gradient(to right bottom, #90BAEB, #ACA9F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#infoContainer {
+  font-size: 3vh;
+  color: #A8A8A8;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+
+#copyright {
+  font-weight: 700;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #ddd;
+  font-size: 3vh;
+  text-align: right;
+  margin: 2vh;
+}

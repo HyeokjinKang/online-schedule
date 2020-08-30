@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Schedule</title>
+  <link rel="stylesheet" href="style.css?pub=1.2">
+</head>
+<body>
+  <div id="dropdownContainer">
+    <select id="classSelector" onchange="classSelected(this)">
+      <option>1-3</option>
+      <option>1-4</option>
+    </select>
+  </div>
+  <div id="titleContainer">
+    <h1 id="title">오늘의 시간표</h1>
+    <h2 id="explanation">지금 수업중 : <span></span>, <a></a></h2>
+  </div>
+  <div id="tableContainer">
+    <div id="tableInnerContainer">
+      <table>
+        <tr>
+          <td class="time">1교시</td>
+          <td class="schedule"></td>
+        </tr>
+        <tr>
+          <td class="time">2교시</td>
+          <td class="schedule"></td>
+        </tr>
+        <tr>
+          <td class="time">3교시</td>
+          <td class="schedule"></td>
+        </tr>
+        <tr>
+          <td class="time">4교시</td>
+          <td class="schedule"></td>
+        </tr>
+        <tr>
+          <td class="time">5교시</td>
+          <td class="schedule"></td>
+        </tr>
+        <tr>
+          <td class="time">6교시</td>
+          <td class="schedule"></td>
+        </tr>
+        <tr>
+          <td class="time">7교시</td>
+          <td class="schedule"></td>
+        </tr>
+      </table>
+      <div id="infoContainer">
+        <span>페이지를 계속 열어두시면<br>준비 시간에 자동으로 링크가 열립니다.</span>
+      </div>
+    </div>
+  </div>
+  <span id="copyright">&copy; Copyright Coupy, 2020. All Rights Reserved.</span>
+  <script src="script.js?pub=1.2"></script>
+</body>
+</html>
