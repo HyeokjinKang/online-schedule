@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20KR:200,400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20KR:200,400,700&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #F6F6F6;
-  font-family: 'Noto Sans KR', '나눔바른고딕', Arial;
+  background-color: #f6f6f6;
+  font-family: "Noto Sans KR", "나눔바른고딕", Arial;
   letter-spacing: -2px;
 }
 
 table {
   width: 100%;
-  height: 80%;
+  height: 50vh;
 }
 
 a {
-  color: #90BAEB;
+  color: #90baeb;
 }
 
 #dropdownContainer {
@@ -25,8 +25,7 @@ a {
 
 #classSelector {
   background: none;
-  width: 7vw;
-  height: 4vh;
+  padding: 6px 12px;
   font-size: 1.5vh;
   border: 2px solid #999;
   color: #999;
@@ -43,9 +42,7 @@ a {
 }
 
 #tableContainer {
-  margin-top: 3vh;
   width: 100vw;
-  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,18 +53,18 @@ a {
   color: #666;
   font-weight: 700;
   font-size: 3vh;
-  padding: 2vw;
-  width: 30vw;
-  height: 65vh;
-  background-color: #FFF;
+  padding: 36px;
+  max-width: 580px;
+  margin: 0px 12px;
+  background-color: #fff;
   border-radius: 10px;
-  filter: drop-shadow(0 0 15px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
 }
 
 #title {
   margin: 0;
   font-size: 6vh;
-  background: linear-gradient(to right bottom, #90BAEB, #ACA9F0);
+  background: linear-gradient(to right bottom, #90baeb, #aca9f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -82,31 +79,28 @@ a {
 }
 
 .time {
-  color: #A8A8A8;
+  color: #a8a8a8;
 }
 
 .selected {
-  background: linear-gradient(to right bottom, #90BAEB, #ACA9F0);
+  background: linear-gradient(to right bottom, #90baeb, #aca9f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #infoContainer {
   font-size: 3vh;
-  color: #A8A8A8;
+  color: #a8a8a8;
   width: 100%;
-  height: 20%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   text-align: center;
+  margin-top: 48px;
 }
 
 #copyright {
   font-weight: 700;
-  position: fixed;
-  bottom: 0;
-  right: 0;
   color: #ddd;
   font-size: 3vh;
   text-align: right;
