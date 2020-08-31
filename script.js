@@ -106,8 +106,8 @@ const initialize = () => {
 const loop = () => {
   setTimeout(loop, 1000);
   if (className == "1-4") {
-    links["CA"] = "https://bit.ly/2Qf4l33";
-    links["HR"] = "https://bit.ly/2Qf4l33";
+    links["CA"] = "zoommtg://zoom.us/join?action=join&confno=4361766687&pwd=dimigo";
+    links["HR"] = "zoommtg://zoom.us/join?action=join&confno=4361766687&pwd=dimigo";
   } else if (className == "1-3") {
     links["CA"] = links["자료구조 A"];
     links["HR"] = links["자료구조 A"];
