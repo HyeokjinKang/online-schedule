@@ -7,18 +7,18 @@ const links = {
   "수학(류)": "zoommtg://zoom.us/join?action=join&confno=6838770867&pwd=dimigo",
   "과학": "zoommtg://zoom.us/join?action=join&confno=7178015132&pwd=dimigo",
   "영어(공)": "zoommtg://zoom.us/join?action=join&confno=4700404365&pwd=dimigo",
-  "영어(전)": "https://zoom.us/j/7385237525?pwd=dHY5SVBuVUNrL0psZjVJU3VKR3JZQT09",
+  "영어(전)": "zoommtg://zoom.us/join?action=join&confno=7385237525&pwd=dimigo",
   "컴일": "zoommtg://zoom.us/join?action=join&confno=6971690768&pwd=dimigo",
   "CA": "",
   "체육": "zoommtg://zoom.us/join?action=join&confno=7760965125&pwd=dimigo",
   "자료구조 A": "zoommtg://zoom.us/join?action=join&confno=433%202940405&pwd=dimigo",
   "HR": "",
   "미술": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
-  "수학(이)": "https://zoom.us/j/7987833794",
-  "역사": "https://us04web.zoom.us/j/3955689232?pwd=eUNCRXoxcDgxKzdhZkJZdzdQTjFmdz09",
-  "상경": "https://zoom.us/j/3154650453",
-  "컴그": "https://zoom.us/j/7987737883",
-  "국어(김)": "https://us02web.zoom.us/j/8134411742?pwd=2P5EGorAeZ3uZTEN4UsZTO6utKTGGQ"
+  "수학(이)": "zoommtg://zoom.us/join?action=join&confno=7987833794&pwd=dimigo",
+  "역사": "zoommtg://zoom.us/join?action=join&confno=3955689232&pwd=dimigo",
+  "상경": "zoommtg://zoom.us/join?action=join&confno=3154650453&pwd=dimigo",
+  "컴그": "zoommtg://zoom.us/join?action=join&confno=7987737883&pwd=dimigo",
+  "국어(김)": "zoommtg://zoom.us/join?action=join&confno=8134411742&pwd=dimigo"
 };
 const schedule = {
   "1-1": {
