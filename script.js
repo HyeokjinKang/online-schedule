@@ -17,7 +17,7 @@ const links = {
   "수학(이)": "zoommtg://zoom.us/join?action=join&confno=7987833794&pwd=dimigo",
   "역사": "zoommtg://zoom.us/join?action=join&confno=3955689232&pwd=dimigo",
   "상경": "zoommtg://zoom.us/join?action=join&confno=3154650453&pwd=dimigo",
-  "컴그": "zoommtg://zoom.us/join?action=join&confno=7987737883&pwd=dimigo",
+  "컴그": "zoommtg://zoom.us/join?action=join&confno=83958752473&pwd=dimigo",
   "국어(김)": "zoommtg://zoom.us/join?action=join&confno=8134411742&pwd=dimigo"
 };
 const schedule = {
