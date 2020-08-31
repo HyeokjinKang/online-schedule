@@ -44,11 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const initialize = () => {
   if(localStorage.getItem('class') == null) {
-    classSelected({value: "1-4"});
+    document.getElementsByTagName('h2')[0].innerHTML = '반을 선택해주세요.';
     return;
   }
   className = localStorage.getItem('class');
   let elements = document.getElementsByTagName('option');
+  if(elements[0].value == '') {
+    classSelector.remove(0);
+  }
   for(let i = 0; i < elements.length; i++) {
     if(className == elements[i].value) {
       classSelector.selectedIndex = i;
