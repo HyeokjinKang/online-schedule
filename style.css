@@ -10,7 +10,7 @@ body {
 
 table {
   width: 100%;
-  height: 80%;
+  height: 50vh;
 }
 
 a {
@@ -45,7 +45,6 @@ a {
 #tableContainer {
   margin-top: 3vh;
   width: 100vw;
-  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,9 +56,8 @@ a {
   font-weight: 700;
   font-size: 3vh;
   padding: 36px;
-  max-width: 540px;
+  max-width: 580px;
   margin: 0px 12px;
-  height: 65vh;
   background-color: #fff;
   border-radius: 10px;
   filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
@@ -96,7 +94,6 @@ a {
   font-size: 3vh;
   color: #a8a8a8;
   width: 100%;
-  height: 20%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
