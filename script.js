@@ -1,18 +1,18 @@
 const links = {
-                "진로": "https://bit.ly/3hrEkcE",
-                "자료구조 B": "https://bit.ly/3j32xqb",
+                "진로": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
+                "자료구조 B": "zoommtg://zoom.us/join?action=join&confno=4679526373&pwd=py2020",
                 "음악": "https://bit.ly/34rBBfM",
-                "국어": "https://bit.ly/2Ysa6Ph",
+                "국어": "zoommtg://zoom.us/join?action=join&confno=3300965795&pwd=dimigo",
                 "사회": "https://bit.ly/34rBBfM",
-                "수학": "https://bit.ly/3hqR9nJ",
-                "과학": "https://bit.ly/3b8gwZ6",
-                "영어": "https://bit.ly/34pW9oX",
-                "컴일": "https://bit.ly/3aM8hle",
-                "CA": "https://bit.ly/2Qf4l33",
-                "체육": "https://bit.ly/2Elyefv",
-                "자료구조 A": "https://bit.ly/31lyLHb",
-                "HR": "https://bit.ly/2Qf4l33"
-              }
+                "수학": "zoommtg://zoom.us/join?action=join&confno=6838770867&pwd=dimigo",
+                "과학": "zoommtg://zoom.us/join?action=join&confno=7178015132&pwd=dimigo",
+                "영어": "zoommtg://zoom.us/join?action=join&confno=4700404365&pwd=dimigo",
+                "컴일": "zoommtg://zoom.us/join?action=join&confno=6971690768&pwd=dimigo",
+                "CA": "",
+                "체육": "zoommtg://zoom.us/join?action=join&confno=7760965125&pwd=dimigo",
+                "자료구조 A": "zoommtg://zoom.us/join?action=join&confno=433%202940405&pwd=dimigo",
+                "HR": ""
+              };
 const schedule = {
                     "1-3": {
                       "Mon": ['영어', '자료구조 A', '자료구조 A', '음악', '자료구조 B', '자료구조 B', '수학'],
@@ -44,11 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const initialize = () => {
   if(localStorage.getItem('class') == null) {
-    classSelected({value: "1-4"});
+    document.getElementsByTagName('h2')[0].innerHTML = '반을 선택해주세요.';
     return;
   }
   className = localStorage.getItem('class');
   let elements = document.getElementsByTagName('option');
+  if(elements[0].value == '') {
+    classSelector.remove(0);
+  }
   for(let i = 0; i < elements.length; i++) {
     if(className == elements[i].value) {
       classSelector.selectedIndex = i;
@@ -59,6 +62,13 @@ const initialize = () => {
 
 const loop = () => {
   setTimeout(loop, 1000);
+  if(className == "1-4") {
+    links["CA"] = "https://bit.ly/2Qf4l33";
+    links["HR"] = "https://bit.ly/2Qf4l33";
+  } else if(className == "1-3") {
+    links["CA"] = links["자료구조 A"];
+    links["HR"] = links["자료구조 A"];
+  }
   const d = new Date();
   todaySchedule = schedule[className][days[d.getDay()]];
   if(todaySchedule[0] == 'No Schedule') {
@@ -167,7 +177,9 @@ const redirect = (link, name) => {
   if(recentName == name) return;
   let a = document.createElement("a");
   a.href = link;
-  a.target = "_blank";
+  if(link.indexOf("zoommtg") == -1) {
+    a.target = "_blank";
+  }
   a.click();
   recentName = name;
 }
