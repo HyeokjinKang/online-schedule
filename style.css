@@ -42,7 +42,6 @@ a {
 }
 
 #tableContainer {
-  margin-top: 3vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -55,7 +54,7 @@ a {
   font-weight: 700;
   font-size: 3vh;
   padding: 36px;
-  max-width: 580px;
+  max-width: max(580px, 30vw);
   margin: 0px 12px;
   background-color: #fff;
   border-radius: 10px;
@@ -97,6 +96,7 @@ a {
   justify-content: center;
   align-items: flex-end;
   text-align: center;
+  margin-top: 48px;
 }
 
 #copyright {
