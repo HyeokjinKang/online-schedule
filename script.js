@@ -1,6 +1,6 @@
 const links = {
                 "진로": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
-                "자료구조 B": "zoommtg://zoom.us/join?action=join&confno=4679526373&pwd=dimigo",
+                "자료구조 B": "zoommtg://zoom.us/join?action=join&confno=4679526373&pwd=py2020",
                 "음악": "https://bit.ly/34rBBfM",
                 "국어": "zoommtg://zoom.us/join?action=join&confno=3300965795&pwd=dimigo",
                 "사회": "https://bit.ly/34rBBfM",
