@@ -16,25 +16,25 @@ const links = {
   "미술": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
   "수학(이)": "zoommtg://zoom.us/join?action=join&confno=7987833794&pwd=dimigo",
   "역사": "zoommtg://zoom.us/join?action=join&confno=3955689232&pwd=dimigo",
-  "상경": "zoommtg://zoom.us/join?action=join&confno=3154650453&pwd=dimigo",
+  "상업경제": "zoommtg://zoom.us/join?action=join&confno=3154650453&pwd=dimigo",
   "컴그": "zoommtg://zoom.us/join?action=join&confno=83958752473&pwd=dimigo",
   "국어(김)": "zoommtg://zoom.us/join?action=join&confno=8134411742&pwd=dimigo"
 };
 const schedule = {
   "1-1": {
     "Mon": ['사회', '음악', '영어(공)', '역사', '컴그', '컴그', '수학(이)'],
-    "Tue": ['상경', '사회', '국어(김)', '과학', '체육', 'CA', 'CA'],
-    "Wed": ['영어(공)', '상경', '음악', '역사', '과학', '수학(이)', ''],
-    "Thu": ['영어(공)', '상경', '음악', '역사', '과학', '국어(성)', 'HR'],
+    "Tue": ['상업경제', '사회', '국어(김)', '과학', '체육', 'CA', 'CA'],
+    "Wed": ['영어(공)', '상업경제', '음악', '역사', '과학', '수학(이)', ''],
+    "Thu": ['영어(공)', '상업경제', '음악', '역사', '과학', '국어(성)', 'HR'],
     "Fri": ['수학(이)', '영어(공)', '역사', '과학', '국어(성)', '음악', '진로'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
   "1-2": {
-    "Mon": ['역사', '사회', '수학(류)', '영어(공)', '미술', '미술', '상경'],
+    "Mon": ['역사', '사회', '수학(류)', '영어(공)', '미술', '미술', '상업경제'],
     "Tue": ['국어(성)', '컴그', '컴그', '사회', '과학', 'CA', 'CA'],
-    "Wed": ['과학', '국어(성)', '체육', '상경', '컴그', '컴그', ''],
-    "Thu": ['사회', '상경', '영어(공)', '역사', '수학(류)', '미술', 'HR'],
+    "Wed": ['과학', '국어(성)', '체육', '상업경제', '컴그', '컴그', ''],
+    "Thu": ['사회', '상업경제', '영어(공)', '역사', '수학(류)', '미술', 'HR'],
     "Fri": ['수학(류)', '과학', '국어(김)', '진로', '영어(공)', '체육', '역사'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
