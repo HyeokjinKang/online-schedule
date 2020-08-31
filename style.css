@@ -54,7 +54,7 @@ a {
   font-weight: 700;
   font-size: 3vh;
   padding: 36px;
-  max-width: max(580px, 30vw);
+  max-width: 580px;
   margin: 0px 12px;
   background-color: #fff;
   border-radius: 10px;
@@ -101,9 +101,6 @@ a {
 
 #copyright {
   font-weight: 700;
-  position: fixed;
-  bottom: 0;
-  right: 0;
   color: #ddd;
   font-size: 3vh;
   text-align: right;
