@@ -11,7 +11,7 @@ const links = {
   "컴일": "zoommtg://zoom.us/join?action=join&confno=6971690768&pwd=dimigo",
   "CA": "",
   "체육": "zoommtg://zoom.us/join?action=join&confno=7760965125&pwd=dimigo",
-  "자료구조 A": "zoommtg://zoom.us/join?action=join&confno=433%202940405&pwd=dimigo",
+  "자료구조 A": "zoommtg://zoom.us/join?action=join&confno=4332940405&pwd=dimigo",
   "HR": "",
   "미술": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
   "수학(이)": "zoommtg://zoom.us/join?action=join&confno=7987833794&pwd=dimigo",
