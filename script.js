@@ -1,24 +1,24 @@
 const links = {
-  "진로": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
-  "자료구조 B": "zoommtg://zoom.us/join?action=join&confno=4679526373&pwd=py2020",
+  "진로": "8448373394&pwd=dimigo",
+  "자료구조 B": "4679526373&pwd=py2020",
   "음악": "https://bit.ly/34rBBfM",
-  "국어(성)": "zoommtg://zoom.us/join?action=join&confno=3300965795&pwd=dimigo",
+  "국어(성)": "3300965795&pwd=dimigo",
   "사회": "https://bit.ly/34rBBfM",
-  "수학(류)": "zoommtg://zoom.us/join?action=join&confno=6838770867&pwd=dimigo",
-  "과학": "zoommtg://zoom.us/join?action=join&confno=7178015132&pwd=dimigo",
-  "영어(공)": "zoommtg://zoom.us/join?action=join&confno=4700404365&pwd=dimigo",
-  "영어(전)": "zoommtg://zoom.us/join?action=join&confno=7385237525&pwd=dimigo",
-  "컴일": "zoommtg://zoom.us/join?action=join&confno=6971690768&pwd=dimigo",
+  "수학(류)": "6838770867&pwd=dimigo",
+  "과학": "7178015132&pwd=dimigo",
+  "영어(공)": "4700404365&pwd=dimigo",
+  "영어(전)": "7385237525&pwd=dimigo",
+  "컴일": "6971690768&pwd=dimigo",
   "CA": "",
-  "체육": "zoommtg://zoom.us/join?action=join&confno=7760965125&pwd=dimigo",
-  "자료구조 A": "zoommtg://zoom.us/join?action=join&confno=4332940405&pwd=dimigo",
+  "체육": "7760965125&pwd=dimigo",
+  "자료구조 A": "4332940405&pwd=dimigo",
   "HR": "",
-  "미술": "zoommtg://zoom.us/join?action=join&confno=8448373394&pwd=dimigo",
-  "수학(이)": "zoommtg://zoom.us/join?action=join&confno=7987833794&pwd=dimigo",
-  "역사": "zoommtg://zoom.us/join?action=join&confno=3955689232&pwd=dimigo",
-  "상업경제": "zoommtg://zoom.us/join?action=join&confno=3154650453&pwd=dimigo",
-  "컴그": "zoommtg://zoom.us/join?action=join&confno=83958752473&pwd=dimigo",
-  "국어(김)": "zoommtg://zoom.us/join?action=join&confno=8134411742&pwd=dimigo"
+  "미술": "8448373394&pwd=dimigo",
+  "수학(이)": "7987833794&pwd=dimigo",
+  "역사": "3955689232&pwd=dimigo",
+  "상업경제": "3154650453&pwd=dimigo",
+  "컴그": "83958752473&pwd=dimigo",
+  "국어(김)": "8134411742&pwd=dimigo"
 };
 const schedule = {
   "1-1": {
@@ -106,8 +106,8 @@ const initialize = () => {
 const loop = () => {
   setTimeout(loop, 1000);
   if (className == "1-4") {
-    links["CA"] = "zoommtg://zoom.us/join?action=join&confno=4361766687&pwd=dimigo";
-    links["HR"] = "zoommtg://zoom.us/join?action=join&confno=4361766687&pwd=dimigo";
+    links["CA"] = "4361766687&pwd=dimigo";
+    links["HR"] = "4361766687&pwd=dimigo";
   } else if (className == "1-3") {
     links["CA"] = links["자료구조 A"];
     links["HR"] = links["자료구조 A"];
@@ -156,7 +156,9 @@ const loop = () => {
   } else if (hour == 9) {
     elements[1].classList.add('selected');
     updateH2(todaySchedule[1], links[todaySchedule[1]], true);
-    redirect(links[todaySchedule[1]], todaySchedule[1]);
+    if(min >= 55) {
+      redirect(links[todaySchedule[1]], todaySchedule[1]);
+    }
   } else if (hour <= 10 && min < 50) {
     elements[1].classList.add('selected');
     updateH2(todaySchedule[1], links[todaySchedule[1]], false);
@@ -164,7 +166,9 @@ const loop = () => {
   } else if (hour == 10) {
     elements[2].classList.add('selected');
     updateH2(todaySchedule[2], links[todaySchedule[2]], true);
-    redirect(links[todaySchedule[2]], todaySchedule[2]);
+    if(min >= 55) {
+      redirect(links[todaySchedule[2]], todaySchedule[2]);
+    }
   } else if (hour <= 11 && min < 50) {
     elements[2].classList.add('selected');
     updateH2(todaySchedule[2], links[todaySchedule[2]], false);
@@ -172,7 +176,9 @@ const loop = () => {
   } else if (hour == 11) {
     elements[3].classList.add('selected');
     updateH2(todaySchedule[3], links[todaySchedule[3]], true);
-    redirect(links[todaySchedule[3]], todaySchedule[3]);
+    if(min >= 55) {
+      redirect(links[todaySchedule[3]], todaySchedule[3]);
+    }
   } else if (hour <= 12 && min < 50) {
     elements[3].classList.add('selected');
     updateH2(todaySchedule[3], links[todaySchedule[3]], false);
@@ -182,7 +188,9 @@ const loop = () => {
   } else if (hour == 13 && min < 50) {
     elements[4].classList.add('selected');
     updateH2(todaySchedule[4], links[todaySchedule[4]], true);
-    redirect(links[todaySchedule[4]], todaySchedule[4]);
+    if(min >= 45) {
+      redirect(links[todaySchedule[4]], todaySchedule[4]);
+    }
   } else if (hour == 13 || (hour <= 14 && min < 40)) {
     elements[4].classList.add('selected');
     updateH2(todaySchedule[4], links[todaySchedule[4]], false);
@@ -190,7 +198,9 @@ const loop = () => {
   } else if (hour == 14 && min < 50) {
     elements[5].classList.add('selected');
     updateH2(todaySchedule[5], links[todaySchedule[5]], true);
-    redirect(links[todaySchedule[5]], todaySchedule[5]);
+    if(min >= 45) {
+      redirect(links[todaySchedule[5]], todaySchedule[5]);
+    }
   } else if (hour == 14 || (hour <= 15 && min < 40)) {
     elements[5].classList.add('selected');
     updateH2(todaySchedule[5], links[todaySchedule[5]], false);
@@ -199,7 +209,9 @@ const loop = () => {
     if(todaySchedule[6] != '') {
       elements[6].classList.add('selected');
       updateH2(todaySchedule[6], links[todaySchedule[6]], true);
-      redirect(links[todaySchedule[6]], todaySchedule[6]);
+      if(min >= 45) {
+        redirect(links[todaySchedule[6]], todaySchedule[6]);
+      }
     } else {
       updateH2('종례', links.HR, true);
     }
@@ -229,7 +241,7 @@ const classSelected = e => {
 };
 
 const updateH2 = (className, classLink, isReady) => {
-  document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, <a href="${classLink}" target="_blank">여기</a>를 눌러 수동접속`;
+  document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, <a href="zoommtg://zoom.us/join?action=join&confno=${classLink}" target="_blank">여기</a>를 눌러 수동접속`;
 };
 
 const noSchedule = () => {
@@ -240,8 +252,8 @@ const redirect = (link, name) => {
   if (recentName == name) return;
   if (name == '컴그') alert("컴그 링크는 정확하지 않을 수 있습니다.");
   let a = document.createElement("a");
-  a.href = link;
-  if (link.indexOf("zoommtg") == -1) {
+  a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
+  if (link.indexOf("pwd") == -1) {
     a.target = "_blank";
   }
   a.click();
