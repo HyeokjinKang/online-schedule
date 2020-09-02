@@ -196,13 +196,21 @@ const loop = () => {
     updateH2(todaySchedule[5], links[todaySchedule[5]], false);
     redirect(links[todaySchedule[5]], todaySchedule[5]);
   } else if (hour == 15 && min < 50) {
-    elements[6].classList.add('selected');
-    updateH2(todaySchedule[6], links[todaySchedule[6]], true);
-    redirect(links[todaySchedule[6]], todaySchedule[6]);
+    if(todaySchedule[6] != '') {
+      elements[6].classList.add('selected');
+      updateH2(todaySchedule[6], links[todaySchedule[6]], true);
+      redirect(links[todaySchedule[6]], todaySchedule[6]);
+    } else {
+      updateH2('종례', links.HR, true);
+    }
   } else if (hour == 15 || (hour <= 16 && min < 40)) {
-    elements[6].classList.add('selected');
-    updateH2(todaySchedule[6], links[todaySchedule[6]], false);
-    redirect(links[todaySchedule[6]], todaySchedule[6]);
+    if(todaySchedule[6] != '') {
+      elements[6].classList.add('selected');
+      updateH2(todaySchedule[6], links[todaySchedule[6]], false);
+      redirect(links[todaySchedule[6]], todaySchedule[6]);
+    } else {
+      updateH2('종례', links.HR, true);
+    }
   } else if (hour == 16 && min < 45) {
     updateH2('종례', links.HR, true);
     redirect(links.HR, '종례');
