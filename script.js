@@ -259,6 +259,7 @@ const redirect = (link, name) => {
   a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
   if(link.indexOf("pwd") == -1) {
     a.target = "_blank";
+    a.href = link;
   }
   a.click();
   recentName = name;
