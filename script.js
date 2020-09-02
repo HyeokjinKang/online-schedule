@@ -17,7 +17,7 @@ const links = {
   "수학(이)": "7987833794&pwd=dimigo",
   "역사": "3955689232&pwd=dimigo",
   "상업경제": "3154650453&pwd=dimigo",
-  "컴그": "83958752473&pwd=dimigo",
+  "컴그": "changing",
   "국어(김)": "8134411742&pwd=dimigo"
 };
 const schedule = {
@@ -86,17 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const initialize = () => {
-  if (localStorage.getItem('class') == null) {
+  if(localStorage.getItem('class') == null) {
     document.getElementsByTagName('h2')[0].innerHTML = '반을 선택해주세요.';
     return;
   }
   className = localStorage.getItem('class');
   let elements = document.getElementsByTagName('option');
-  if (elements[0].value == '선택해주세요') {
+  if(elements[0].value == '선택해주세요') {
     classSelector.remove(0);
   }
   for (let i = 0; i < elements.length; i++) {
-    if (className == elements[i].value) {
+    if(className == elements[i].value) {
       classSelector.selectedIndex = i;
     }
   }
@@ -105,28 +105,28 @@ const initialize = () => {
 
 const loop = () => {
   setTimeout(loop, 1000);
-  if (className == "1-4") {
+  if(className == "1-4") {
     links["CA"] = "4361766687&pwd=dimigo";
     links["HR"] = "4361766687&pwd=dimigo";
-  } else if (className == "1-3") {
+  } else if(className == "1-3") {
     links["CA"] = links["자료구조 A"];
     links["HR"] = links["자료구조 A"];
-  } else if (className == "1-1") {
+  } else if(className == "1-1") {
     links["CA"] = links["영어(공)"];
     links["HR"] = links["영어(공)"];
-  } else if (className == "1-2") {
+  } else if(className == "1-2") {
     links["CA"] = links["수학(류)"];
     links["HR"] = links["수학(류)"];
-  } else if (className == "1-5") {
+  } else if(className == "1-5") {
     links["CA"] = links["음악"];
     links["HR"] = links["음악"];
-  } else if (className == "1-6") {
+  } else if(className == "1-6") {
     links["CA"] = links["사회"];
     links["HR"] = links["사회"];
   }
   const d = new Date();
   todaySchedule = schedule[className][days[d.getDay()]];
-  if (todaySchedule[0] == 'No Schedule') {
+  if(todaySchedule[0] == 'No Schedule') {
     noSchedule();
     return;
   }
@@ -137,75 +137,75 @@ const loop = () => {
   }
   let hour = d.getHours();
   let min = d.getMinutes();
-  if (hour < 8) {
+  if(hour < 8) {
     document.getElementsByTagName('h2')[0].innerHTML = '아직 리잠 잘 시간이야..';
-  } else if (hour <= 8 && min < 45) {
+  } else if(hour <= 8 && min < 45) {
     updateH2('조례', links.HR, true);
     redirect(links.HR, '조례');
-  } else if (hour == 8 && min < 58) {
+  } else if(hour == 8 && min < 58) {
     updateH2('조례', links.HR, false);
     redirect(links.HR, '조례');
-  } else if (hour == 8) {
+  } else if(hour == 8) {
     elements[0].classList.add('selected');
     updateH2(todaySchedule[0], links[todaySchedule[0]], true);
     redirect(links[todaySchedule[0]], todaySchedule[0]);
-  } else if (hour <= 9 && min < 50) {
+  } else if(hour <= 9 && min < 50) {
     elements[0].classList.add('selected');
     updateH2(todaySchedule[0], links[todaySchedule[0]], false);
     redirect(links[todaySchedule[0]], todaySchedule[0]);
-  } else if (hour == 9) {
+  } else if(hour == 9) {
     elements[1].classList.add('selected');
     updateH2(todaySchedule[1], links[todaySchedule[1]], true);
     if(min >= 55) {
       redirect(links[todaySchedule[1]], todaySchedule[1]);
     }
-  } else if (hour <= 10 && min < 50) {
+  } else if(hour <= 10 && min < 50) {
     elements[1].classList.add('selected');
     updateH2(todaySchedule[1], links[todaySchedule[1]], false);
     redirect(links[todaySchedule[1]], todaySchedule[1]);
-  } else if (hour == 10) {
+  } else if(hour == 10) {
     elements[2].classList.add('selected');
     updateH2(todaySchedule[2], links[todaySchedule[2]], true);
     if(min >= 55) {
       redirect(links[todaySchedule[2]], todaySchedule[2]);
     }
-  } else if (hour <= 11 && min < 50) {
+  } else if(hour <= 11 && min < 50) {
     elements[2].classList.add('selected');
     updateH2(todaySchedule[2], links[todaySchedule[2]], false);
     redirect(links[todaySchedule[2]], todaySchedule[2]);
-  } else if (hour == 11) {
+  } else if(hour == 11) {
     elements[3].classList.add('selected');
     updateH2(todaySchedule[3], links[todaySchedule[3]], true);
     if(min >= 55) {
       redirect(links[todaySchedule[3]], todaySchedule[3]);
     }
-  } else if (hour <= 12 && min < 50) {
+  } else if(hour <= 12 && min < 50) {
     elements[3].classList.add('selected');
     updateH2(todaySchedule[3], links[todaySchedule[3]], false);
     redirect(links[todaySchedule[3]], todaySchedule[3]);
-  } else if (hour == 12 || (hour == 13 && min < 40)) {
+  } else if(hour == 12 || (hour == 13 && min < 40)) {
     document.getElementsByTagName('h2')[0].innerHTML = '점심시간 !';
-  } else if (hour == 13 && min < 50) {
+  } else if(hour == 13 && min < 50) {
     elements[4].classList.add('selected');
     updateH2(todaySchedule[4], links[todaySchedule[4]], true);
     if(min >= 45) {
       redirect(links[todaySchedule[4]], todaySchedule[4]);
     }
-  } else if (hour == 13 || (hour <= 14 && min < 40)) {
+  } else if(hour == 13 || (hour <= 14 && min < 40)) {
     elements[4].classList.add('selected');
     updateH2(todaySchedule[4], links[todaySchedule[4]], false);
     redirect(links[todaySchedule[4]], todaySchedule[4]);
-  } else if (hour == 14 && min < 50) {
+  } else if(hour == 14 && min < 50) {
     elements[5].classList.add('selected');
     updateH2(todaySchedule[5], links[todaySchedule[5]], true);
     if(min >= 45) {
       redirect(links[todaySchedule[5]], todaySchedule[5]);
     }
-  } else if (hour == 14 || (hour <= 15 && min < 40)) {
+  } else if(hour == 14 || (hour <= 15 && min < 40)) {
     elements[5].classList.add('selected');
     updateH2(todaySchedule[5], links[todaySchedule[5]], false);
     redirect(links[todaySchedule[5]], todaySchedule[5]);
-  } else if (hour == 15 && min < 50) {
+  } else if(hour == 15 && min < 50) {
     if(todaySchedule[6] != '') {
       elements[6].classList.add('selected');
       updateH2(todaySchedule[6], links[todaySchedule[6]], true);
@@ -215,7 +215,7 @@ const loop = () => {
     } else {
       updateH2('종례', links.HR, true);
     }
-  } else if (hour == 15 || (hour <= 16 && min < 40)) {
+  } else if(hour == 15 || (hour <= 16 && min < 40)) {
     if(todaySchedule[6] != '') {
       elements[6].classList.add('selected');
       updateH2(todaySchedule[6], links[todaySchedule[6]], false);
@@ -223,10 +223,10 @@ const loop = () => {
     } else {
       updateH2('종례', links.HR, true);
     }
-  } else if (hour == 16 && min < 45) {
+  } else if(hour == 16 && min < 45) {
     updateH2('종례', links.HR, true);
     redirect(links.HR, '종례');
-  } else if (hour == 16) {
+  } else if(hour == 16) {
     updateH2('종례', links.HR, false);
     redirect(links.HR, '종례');
   } else {
@@ -241,6 +241,10 @@ const classSelected = e => {
 };
 
 const updateH2 = (className, classLink, isReady) => {
+  if(classLink == 'changing') {
+    document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, 수동접속 필요`;
+    return;
+  }
   document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, <a href="zoommtg://zoom.us/join?action=join&confno=${classLink}" target="_blank">여기</a>를 눌러 수동접속`;
 };
 
@@ -249,11 +253,11 @@ const noSchedule = () => {
 };
 
 const redirect = (link, name) => {
-  if (recentName == name) return;
-  if (name == '컴그') alert("컴그 링크는 정확하지 않을 수 있습니다.");
+  if(recentName == name) return;
+  if(name == '컴그') return;
   let a = document.createElement("a");
   a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
-  if (link.indexOf("pwd") == -1) {
+  if(link.indexOf("pwd") == -1) {
     a.target = "_blank";
   }
   a.click();
