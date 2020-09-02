@@ -42,7 +42,7 @@ const schedule = {
   "1-3": {
     "Mon": ['영어(공)', '자료구조 A', '자료구조 A', '음악', '자료구조 B', '자료구조 B', '수학(류)'],
     "Tue": ['수학(류)', '과학', '체육', '음악', '컴일', '진로', 'CA'],
-    "Wed": ['자료구조 A', '영어(공)', '진로', '국어(성)', '사회', '수학(류)'],
+    "Wed": ['자료구조 A', '영어(공)', '진로', '국어(성)', '사회', '수학(류)', ''],
     "Thu": ['컴일', '과학', '사회', '국어(성)', '음악', '체육', 'HR'],
     "Fri": ['국어(성)', '사회', '자료구조 B', '컴일', '자료구조 A', '과학', '영어(공)'],
     "Sat": ['No Schedule'],
@@ -238,6 +238,7 @@ const noSchedule = () => {
 
 const redirect = (link, name) => {
   if (recentName == name) return;
+  if (name == '컴그') alert("컴그 링크는 정확하지 않을 수 있습니다.");
   let a = document.createElement("a");
   a.href = link;
   if (link.indexOf("zoommtg") == -1) {
