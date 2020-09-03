@@ -245,7 +245,10 @@ const updateH2 = (className, classLink, isReady) => {
     document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, 수동접속 필요`;
     return;
   }
-  document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, <a href="zoommtg://zoom.us/join?action=join&confno=${classLink}" target="_blank">여기</a>를 눌러 수동접속`;
+  if(classLink.indexOf("pwd") != -1) {
+    classLink = `zoommtg://zoom.us/join?action=join&confno=${classLink}`;
+  }
+  document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, <a href="${classLink}" target="_blank">여기</a>를 눌러 수동접속`;
 };
 
 const noSchedule = () => {
