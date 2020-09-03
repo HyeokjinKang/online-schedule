@@ -30,7 +30,8 @@ const links = {
   "응프": "6863031340&pwd=dimigo",
   "응화": "3650046422&pwd=dimigo",
   "자구": "3650046422&pwd=dimigo",
-  "정통": "3335559622&pwd=dimigo"
+  "정통": "3335559622&pwd=dimigo",
+  "수학2": "7965443330&pwd=dimigo"
 };
 const schedule = {
   "1-1": {
