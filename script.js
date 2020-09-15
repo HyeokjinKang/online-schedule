@@ -33,6 +33,7 @@ const links = {
   "정통": "3335559622&pwd=dimigo",
   "수학2": "7965443330&pwd=dimigo"
 };
+
 const schedule = {
   "1-1": {
     "Mon": ['사회', '음악', '영어(공)', '역사', '컴그', '컴그', '수학(이)'],
@@ -98,6 +99,7 @@ const schedule = {
     "Sun": ['No Schedule']
   }
 };
+
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let className = '';
 let todaySchedule = [];
@@ -106,6 +108,15 @@ let recentName = '';
 document.addEventListener("DOMContentLoaded", () => {
   initialize();
 });
+
+const isMobile = () => {
+	let UserAgent = navigator.userAgent;
+	if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
 const initialize = () => {
   if(localStorage.getItem('class') == null) {
@@ -279,7 +290,11 @@ const noSchedule = () => {
 const redirect = (link, name) => {
   if(recentName == name) return;
   let a = document.createElement("a");
-  a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
+  if(isMobile()) {
+    a.href = `https://zoom.us/j/${link}`.replace('&', '?');
+  } else {
+    a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
+  }
   if(link.indexOf("pwd") == -1) {
     a.target = "_blank";
     a.href = link;
