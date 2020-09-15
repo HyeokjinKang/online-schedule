@@ -266,10 +266,6 @@ const classSelected = e => {
 };
 
 const updateH2 = (className, classLink, isReady) => {
-  if(classLink == 'changing') {
-    document.getElementsByTagName('h2')[0].innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, 수동접속 필요`;
-    return;
-  }
   if(classLink.indexOf("pwd") != -1) {
     classLink = `zoommtg://zoom.us/join?action=join&confno=${classLink}`;
   }
@@ -282,7 +278,6 @@ const noSchedule = () => {
 
 const redirect = (link, name) => {
   if(recentName == name) return;
-  if(name == '컴그') return;
   let a = document.createElement("a");
   a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
   if(link.indexOf("pwd") == -1) {
