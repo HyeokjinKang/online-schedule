@@ -17,7 +17,7 @@ const links = {
   "수학(이)": "7987833794&pwd=dimigo",
   "역사": "3955689232&pwd=dimigo",
   "상업경제": "3154650453&pwd=dimigo",
-  "컴그": "changing",
+  "컴그": "7987737883&pwd=dimigo",
   "국어(김)": "8134411742&pwd=dimigo",
   "문학": "8134411742&pwd=dimigo",
   "영어(이)": "7126847915&pwd=dimigo",
