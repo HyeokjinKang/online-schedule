@@ -166,6 +166,13 @@ const loop = () => {
     noSchedule();
     return;
   }
+  if(d.getDate() == 30 || d.getDate() < 5 || d.getDate() == 9) {
+    noSchedule();
+    return;
+  }
+  if(d.getDate() == 5) {
+    todaySchedule = schedule[className].Fri;
+  }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
     elements[i].textContent = todaySchedule[i];
