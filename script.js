@@ -119,6 +119,7 @@ const isMobile = () => {
 };
 
 const initialize = () => {
+  schedule["1-4"].Tue = ['자료구조 B', '자료구조 B', '영어(공)', '자료구조 B', '국어(성)', 'CA', 'CA'];
   if(localStorage.getItem('class') == null) {
     document.getElementsByTagName('h2')[0].innerHTML = '반을 선택해주세요.';
     return;
