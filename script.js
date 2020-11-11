@@ -124,9 +124,6 @@ const initialize = () => {
     return;
   }
   className = localStorage.getItem('class');
-  if(d.getDate() == 12) {
-    todaySchedule = schedule[className].Mon;
-  }
   let elements = document.getElementsByTagName('option');
   if(elements[0].value == '선택해주세요') {
     classSelector.remove(0);
@@ -168,6 +165,9 @@ const loop = () => {
   if(todaySchedule[0] == 'No Schedule') {
     noSchedule();
     return;
+  }
+  if(d.getDate() == 12) {
+    todaySchedule = schedule[className].Mon;
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
