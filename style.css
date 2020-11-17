@@ -117,3 +117,9 @@ a {
     display: none;
   }
 }
+
+#adContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
