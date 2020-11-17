@@ -166,8 +166,8 @@ const loop = () => {
     noSchedule();
     return;
   }
-  if(d.getDate() == 12) {
-    todaySchedule = schedule[className].Mon;
+  if(d.getDate() == 18 && className == "1-6") {
+    todaySchedule[3] = "영어(공)";
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
