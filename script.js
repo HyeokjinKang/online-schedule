@@ -166,7 +166,7 @@ const loop = () => {
     noSchedule();
     return;
   }
-  if(d.getDate() == 31) {
+  if(d.getDate() == 1) {
     todaySchedule = schedule[className].Thu;
   }
   let elements = document.getElementsByClassName('schedule');
