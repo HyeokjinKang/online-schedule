@@ -166,8 +166,11 @@ const loop = () => {
     noSchedule();
     return;
   }
-  if(d.getDate() == 1) {
-    todaySchedule = schedule[className].Thu;
+  if(d.getDate() == 2) {
+    todaySchedule[3] = 'HR';
+    todaySchedule[4] = '';
+    todaySchedule[5] = '';
+    todaySchedule[6] = '';
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
