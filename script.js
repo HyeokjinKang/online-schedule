@@ -167,7 +167,7 @@ const loop = () => {
     return;
   }
   if(d.getDate() == 2) {
-    todaySchedule[3] = 'HR';
+    todaySchedule[3] = 'CA';
     todaySchedule[4] = '';
     todaySchedule[5] = '';
     todaySchedule[6] = '';
