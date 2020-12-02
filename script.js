@@ -171,6 +171,9 @@ const loop = () => {
     todaySchedule[4] = '';
     todaySchedule[5] = '';
     todaySchedule[6] = '';
+    if(className == '1-4') {
+      todaySchedule[3] = '컴일';
+    }
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
