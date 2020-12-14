@@ -168,7 +168,7 @@ const loop = () => {
   }
   if(d.getDate() == 15) {
     if(className == '1-4') {
-      todaySchedule[0] = '자료구조 B';
+      todaySchedule[0] = '자료구조 A';
     }
   }
   let elements = document.getElementsByClassName('schedule');
