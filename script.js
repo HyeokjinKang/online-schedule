@@ -166,13 +166,9 @@ const loop = () => {
     noSchedule();
     return;
   }
-  if(d.getDate() == 2) {
-    todaySchedule[3] = 'CA';
-    todaySchedule[4] = '';
-    todaySchedule[5] = '';
-    todaySchedule[6] = '';
+  if(d.getDate() == 15) {
     if(className == '1-4') {
-      todaySchedule[3] = '컴일';
+      todaySchedule[0] = '자료구조 B';
     }
   }
   let elements = document.getElementsByClassName('schedule');
