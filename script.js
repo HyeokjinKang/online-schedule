@@ -295,10 +295,14 @@ const noSchedule = () => {
 const redirect = (link, name) => {
   if(recentName == name) return;
   let a = document.createElement("a");
-  if(isMobile()) {
-    a.href = `https://zoom.us/j/${link}`.replace('&', '?');
+  if(name == '컴일' && className == "1-4") {
+    link = 'https://meet.google.com/lookup/adpsk3wujd';
   } else {
-    a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
+    if(isMobile()) {
+      a.href = `https://zoom.us/j/${link}`.replace('&', '?');
+    } else {
+      a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
+    }
   }
   if(link.indexOf("pwd") == -1) {
     a.target = "_blank";
