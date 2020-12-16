@@ -166,9 +166,11 @@ const loop = () => {
     noSchedule();
     return;
   }
-  if(d.getDate() == 15) {
+  if(d.getDate() == 17) {
     if(className == '1-4') {
-      todaySchedule[0] = '자료구조 A';
+      todaySchedule[3] = '자료구조 A';
+      todaySchedule[4] = '컴일';
+      todaySchedule[5] = '자료구조 B';
     }
   }
   let elements = document.getElementsByClassName('schedule');
@@ -295,7 +297,7 @@ const noSchedule = () => {
 const redirect = (link, name) => {
   if(recentName == name) return;
   let a = document.createElement("a");
-  if(name == '컴일' && className == "1-4") {
+  if(name == '컴일' && className == "1-4" && false) {
     link = 'https://meet.google.com/lookup/adpsk3wujd';
   } else {
     if(isMobile()) {
