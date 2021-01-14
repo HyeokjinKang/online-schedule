@@ -31,7 +31,14 @@ const links = {
   "응화": "3650046422&pwd=dimigo",
   "자구": "3650046422&pwd=dimigo",
   "정통": "3335559622&pwd=dimigo",
-  "수학2": "7965443330&pwd=dimigo"
+  "수학2": "7965443330&pwd=dimigo",
+  "국어문법": "8134411742&pwd=dimigo",
+  "수능문학": "8134411742&pwd=dimigo",
+  "무한의신비": "7965443330&pwd=dimigo",
+  "행렬론": "7965443330&pwd=dimigo",
+  "행렬론": "7965443330&pwd=dimigo",
+  "데이터분석": "4679526373&pwd=py2020",
+  "3D애니메이션": "4679526373&pwd=py2020",
 };
 
 const schedule = {
@@ -166,6 +173,21 @@ const loop = () => {
     noSchedule();
     return;
   }
+
+  //방과후 대응//
+  if(className == "1-4" || className == "1-3" || className == "1-2") {
+    todaySchedule[0] = '수학(류)';
+  } else {
+    todaySchedule[0] = '수학(이)';
+  }
+  todaySchedule[1] = '영어(공)';
+  todaySchedule[2] = '국어(성)';
+  todaySchedule[3] = '';
+  todaySchedule[4] = '';
+  todaySchedule[5] = '';
+  todaySchedule[6] = '';
+  //방과후 대응//
+
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
     elements[i].textContent = todaySchedule[i];
@@ -209,7 +231,53 @@ const loop = () => {
     elements[2].classList.add('selected');
     updateH2(todaySchedule[2], links[todaySchedule[2]], false);
     redirect(links[todaySchedule[2]], todaySchedule[2]);
-  } else if(hour == 11) {
+
+  //방과후 대응//
+  } else if(hour == 11 || (hour == 12 && min < 45)) {
+    document.getElementsByTagName('h2')[0].innerHTML = '점심시간 !';
+  } else if(hour == 12 || (hour <= 13 && min < 40)) {
+    document.getElementsByTagName('h2')[0].innerHTML = '방과후 오후 수업은 수동 선택이 필요합니다.<br>아래에서 수업을 클릭해주세요.';
+    elements[0].textContent = '국어문법';
+    elements[1].textContent = '무한의신비';
+    todaySchedule[0] = '국어문법';
+    todaySchedule[1] = '무한의신비';
+    if(d.getDay() == 1 || d.getDay() == 3 || d.getDay() == 5) {
+      elements[2].textContent = '데이터분석';
+      todaySchedule[2] = '데이터분석';
+    } else {
+      elements[2].textContent = '3D애니메이션';
+      todaySchedule[3] = '3D애니메이션';
+    }
+  } else if(hour == 13 || (hour <= 14 && min < 40)) {
+    document.getElementsByTagName('h2')[0].innerHTML = '방과후 오후 수업은 수동 선택이 필요합니다.<br>아래에서 수업을 클릭해주세요.';
+    elements[0].textContent = '수능문학';
+    elements[1].textContent = '행렬론';
+    todaySchedule[0] = '수능문학';
+    todaySchedule[1] = '행렬론';
+    if(d.getDay() == 1 || d.getDay() == 3 || d.getDay() == 5) {
+      elements[2].textContent = '데이터분석';
+      todaySchedule[2] = '데이터분석';
+    } else {
+      elements[2].textContent = '3D애니메이션';
+      todaySchedule[3] = '3D애니메이션';
+    }
+  } else if(hour == 14 || (hour <= 15 && min < 40)) {
+    document.getElementsByTagName('h2')[0].innerHTML = '방과후 오후 수업은 수동 선택이 필요합니다.<br>아래에서 수업을 클릭해주세요.';
+    elements[0].textContent = '상업경제';
+    elements[1].textContent = '중국어';
+    todaySchedule[0] = '상업경제';
+    todaySchedule[1] = '중국어';
+    if(d.getDay() == 1 || d.getDay() == 3 || d.getDay() == 5) {
+      elements[2].textContent = '데이터분석';
+      todaySchedule[2] = '데이터분석';
+    } else {
+      elements[2].textContent = '3D애니메이션';
+      todaySchedule[3] = '3D애니메이션';
+    }
+  }
+  //방과후 대응//
+
+  /* else if(hour == 11) {
     elements[3].classList.add('selected');
     updateH2(todaySchedule[3], links[todaySchedule[3]], true);
     if(min >= 55) {
@@ -265,7 +333,7 @@ const loop = () => {
   } else if(hour == 16) {
     updateH2('종례', links.HR, false);
     redirect(links.HR, '종례');
-  } else {
+  }*/ else {
     document.getElementsByTagName('h2')[0].innerHTML = '수업끝 !!';
     recentName = '';
   }
