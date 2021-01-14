@@ -289,11 +289,16 @@ const noSchedule = () => {
 
 const scheduleClicked = n => {
   explanation.textContent = '링크를 실행하는 중..';
-  redirect(links[todaySchedule[n]], todaySchedule[n]);
+  call(links[todaySchedule[n]]);
 };
 
 const redirect = (link, name) => {
   if(recentName == name) return;
+  call(link);
+  recentName = name;
+};
+
+const call = (link) => {
   let a = document.createElement("a");
   if(isMobile()) {
     a.href = `https://zoom.us/j/${link}`.replace('&', '?');
@@ -305,5 +310,4 @@ const redirect = (link, name) => {
     a.href = link;
   }
   a.click();
-  recentName = name;
-}
+};
