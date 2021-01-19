@@ -195,15 +195,15 @@ const loop = () => {
   }
   let hour = d.getHours();
   let min = d.getMinutes();
-  if(hour < 8) {
+  if(hour <= 8 && min < 55) {
     document.getElementsByTagName('h2')[0].innerHTML = '아직 리잠 잘 시간이야..';
-  } else if(hour <= 8 && min < 45) {
+  }/* else if(hour <= 8 && min < 45) {
     updateH2('조례', links.HR, true);
     redirect(links.HR, '조례');
   } else if(hour == 8 && min < 58) {
     updateH2('조례', links.HR, false);
     redirect(links.HR, '조례');
-  } else if(hour == 8) {
+  }*/ else if(hour == 8) {
     elements[0].classList.add('selected');
     updateH2(todaySchedule[0], links[todaySchedule[0]], true);
     redirect(links[todaySchedule[0]], todaySchedule[0]);
@@ -357,7 +357,7 @@ const noSchedule = () => {
 
 const scheduleClicked = n => {
   explanation.textContent = '링크를 실행하는 중..';
-  call(links[todaySchedule[n]]);
+  call(links[document.getElementsByClassName('schedule')[n].textContent]);
 };
 
 const redirect = (link, name) => {
