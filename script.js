@@ -175,13 +175,27 @@ const loop = () => {
   }
 
   //방과후 대응//
-  if(className == "1-4" || className == "1-3" || className == "1-2") {
-    todaySchedule[0] = '수학(류)';
+  if(d.getDate() < 22) {
+    if(className == "1-4" || className == "1-3" || className == "1-2") {
+      todaySchedule[0] = '수학(류)';
+      todaySchedule[1] = '영어(공)';
+      todaySchedule[2] = '국어(성)';
+    } else {
+      todaySchedule[0] = '영어(공)';
+      todaySchedule[1] = '국어(성)';
+      todaySchedule[2] = '수학(이)';
+    }
   } else {
-    todaySchedule[0] = '수학(이)';
+    if(className == "1-4" || className == "1-3" || className == "1-2") {
+      todaySchedule[0] = '영어(공)';
+      todaySchedule[1] = '국어(성)';
+      todaySchedule[2] = '수학(류)';
+    } else {
+      todaySchedule[0] = '수학(이)';
+      todaySchedule[1] = '영어(공)';
+      todaySchedule[2] = '국어(성)';
+    }
   }
-  todaySchedule[1] = '영어(공)';
-  todaySchedule[2] = '국어(성)';
   todaySchedule[3] = '';
   todaySchedule[4] = '';
   todaySchedule[5] = '';
