@@ -116,9 +116,24 @@ const initialize = () => {
 
 const loop = () => {
   setTimeout(loop, 1000);
-  if(className == "1-4") {
+  if(className == "1-1") {
+    links["CA"] = links["상경(김)"];
+    links["HR"] = links["상경(김)"];
+  } else if(className == "1-2") {
+    links["CA"] = links["영어(양)"];
+    links["HR"] = links["영어(양)"];
+  } else if(className == "1-3") {
+    links["CA"] = links["음악(이)"];
+    links["HR"] = links["음악(이)"];
+  } else if(className == "1-4") {
     links["CA"] = links["통과(전)"];
     links["HR"] = links["통과(전)"];
+  } else if(className == "1-5") {
+    links["CA"] = links["국어(허)"];
+    links["HR"] = links["국어(허)"];
+  } else if(className = "1-6") {
+    links["CA"] = links["사회(이)"];
+    links["HR"] = links["사회(이)"];
   }
   const d = new Date();
   todaySchedule = schedule[className][days[d.getDay()]];
