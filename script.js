@@ -1,107 +1,78 @@
 const links = {
-  "진로(김)": "8448373394&pwd=dimigo",
-  "자료구조 B": "4679526373&pwd=py2020",
-  "음악": "https://bit.ly/34rBBfM",
-  "국어(성)": "3300965795&pwd=dimigo",
-  "사회": "https://bit.ly/34rBBfM",
+  "국어(허)": "5377141697&pwd=dimigo",
   "수학(류)": "6838770867&pwd=dimigo",
-  "과학": "7178015132&pwd=dimigo",
-  "영어(공)": "4700404365&pwd=dimigo",
-  "영어(전)": "7385237525&pwd=dimigo",
-  "컴일": "6971690768&pwd=dimigo",
-  "CA": "",
-  "체육": "7760965125&pwd=dimigo",
-  "자료구조 A": "4332940405&pwd=dimigo",
-  "HR": "",
-  "미술": "8448373394&pwd=dimigo",
-  "수학(이)": "7987833794&pwd=dimigo",
-  "역사": "3955689232&pwd=dimigo",
-  "상업경제": "3154650453&pwd=dimigo",
-  "컴그": "5167722887&pwd=6ezc0x",
-  "국어(김)": "8134411742&pwd=dimigo",
-  "문학": "8134411742&pwd=dimigo",
-  "영어(이)": "7126847915&pwd=dimigo",
-  "공수(이)": "7987833794&pwd=dimigo",
-  "진로(박)": "3955689232&pwd=dimigo",
-  "화학1": "4361766687&pwd=dimigo",
-  "중국어": "7722593481&pwd=dimigo",
-  "운건": "7864104388&pwd=dimigo",
-  "성직": "7223454774&pwd=dimigo",
-  "응프": "6863031340&pwd=dimigo",
-  "응화": "3650046422&pwd=dimigo",
-  "자구": "3650046422&pwd=dimigo",
-  "정통": "3335559622&pwd=dimigo",
-  "수학2": "7965443330&pwd=dimigo",
-  "국어문법": "8134411742&pwd=dimigo",
-  "수능문학": "8134411742&pwd=dimigo",
-  "무한의신비": "7965443330&pwd=dimigo",
-  "행렬론": "7965443330&pwd=dimigo",
-  "행렬론": "7965443330&pwd=dimigo",
-  "데이터분석": "4679526373&pwd=py2020",
-  "3D애니메이션": "4679526373&pwd=py2020",
+  "수학(김)": "https://teams.microsoft.com/l/team/19%3a3bc99faef2654410ba199d1d143b200c%40thread.tacv2/conversations?groupId=5eb418d5-652a-473d-b11d-6981e06a2203&tenantId=b6d94080-6cb3-403b-8a0f-5c44c2448089",
+  "영어(양)": "7654919677&pwd=dimigo",
+  "진로(공)": "4700404365&pwd=dimigo",
+  "사회(이)": "https://bit.ly/34rBBfM",
+  "한국사(박)": "3955689232&pwd=dimigo",
+  "통과(전)": "2693268647&pwd=dimigo",
+  "체육(김)": "7760965125&pwd=dimigo",
+  "진로(상)": "3490119479&pwd=dimigo",
+  "미술(전)": "5135798594&pwd=dimigo",
+  "음악(이)": "https://bit.ly/34rBBfM",
+  "진로(택)": "https://bit.ly/34rBBfM",
+  "상경(김)": "8402132429&pwd=dimigo",
+  "플밍(김)": "6471668401&pwd=dimigo",
+  "IOT(하)": "3053522072&pwd=dimigo",
+  "컴그(하)": "85619794873&pwd=dimigo",
+  "컴일(조)": "3650046422&pwd=dimigo",
+  "진로(전)": "7385237525&pwd=dimigo",
+  "진로(호)": "5363759347&pwd=dimigo"
 };
 
 const schedule = {
   "1-1": {
-    "Mon": ['사회', '음악', '영어(공)', '역사', '컴그', '컴그', '수학(이)'],
-    "Tue": ['상업경제', '사회', '국어(김)', '과학', '체육', 'CA', 'CA'],
-    "Wed": ['영어(공)', '상업경제', '음악', '역사', '과학', '수학(이)', ''],
-    "Thu": ['영어(공)', '상업경제', '음악', '역사', '과학', '국어(성)', 'HR'],
-    "Fri": ['수학(이)', '영어(공)', '역사', '과학', '국어(성)', '음악', '진로(김)'],
+    "Mon": ['영어(양)', '국어(허)', '컴그(하)', '컴그(하)', '통과(전)', '음악(이)', 'HR'],
+    "Tue": ['사회(이)', '상경(김)', '통과(전)', '수학(류)', '한국사(박)', '영어(양)', '음악(이)'],
+    "Wed": ['상경(김)', '체육(김)', '사회(이)', '한국사(박)', '통과(전)', 'CA', ''],
+    "Thu": ['수학(류)', '영어(양)', '상경(김)', '음악(이)', '진로(전)', '국어(허)', '한국사(박)'],
+    "Fri": ['진로(전)', '국어(허)', '사회(이)', '수학(류)', '컴그(하)', '컴그(하)', '체육(김)'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
   "1-2": {
-    "Mon": ['역사', '사회', '수학(류)', '영어(공)', '미술', '미술', '상업경제'],
-    "Tue": ['국어(성)', '컴그', '컴그', '사회', '과학', 'CA', 'CA'],
-    "Wed": ['과학', '국어(성)', '체육', '상업경제', '컴그', '컴그', ''],
-    "Thu": ['사회', '상업경제', '영어(공)', '역사', '수학(류)', '미술', 'HR'],
-    "Fri": ['수학(류)', '과학', '국어(김)', '진로(김)', '영어(공)', '체육', '역사'],
+    "Mon": ['상경(김)', '영어(양)', '진로(상)', '체육(김)', '한국사(박)', '사회(이)', 'HR'],
+    "Tue": ['한국사(박)', '사회(이)', '국어(허)', '영어(양)', '상경(김)', '미술(전)', '통과(전)'],
+    "Wed": ['미술(전)', '통과(전)', '수학(김)', '체육(김)', '진로(상)', 'CA', ''],
+    "Thu": ['국어(허)', '수학(김)', '한국사(박)', '과학(전)', '컴그(하)', '컴그(하)', '사회(이)'],
+    "Fri": ['상경(김)', '컴그(하)', '컴그(하)', '영어(양)', '국어(허)', '미술(전)', '수학(김)'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
   "1-3": {
-    "Mon": ['영어(공)', '자료구조 A', '자료구조 A', '음악', '자료구조 B', '자료구조 B', '수학(류)'],
-    "Tue": ['수학(류)', '과학', '체육', '음악', '컴일', '진로(김)', 'CA'],
-    "Wed": ['자료구조 A', '영어(공)', '진로(김)', '국어(성)', '사회', '수학(류)', ''],
-    "Thu": ['컴일', '과학', '사회', '국어(성)', '음악', '체육', 'HR'],
-    "Fri": ['국어(성)', '사회', '자료구조 B', '컴일', '자료구조 A', '과학', '영어(공)'],
+    "Mon": ['사회(이)', '통과(전)', '체육(김)', '음악(이)', '플밍(김)', '플밍(김)', 'HR'],
+    "Tue": ['플밍(김)', '플밍(김)', '컴일(조)', '컴일(조)', '국어(허)', 'IOT(하)', 'IOT(하)'],
+    "Wed": ['국어(허)', '수학(류)', '영어(양)', '사회(이)', '진로(택)', 'CA', ''],
+    "Thu": ['사회(이)', '음악(이)', '통과(전)', '국어(허)', '체육(김)', '영어(양)', '수학(류)'],
+    "Fri": ['음악(이)', '영어(양)', '통과(전)', 'IOT(하)', '진로(택)', '수학(류)', '컴일(조)'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
   "1-4": {
-    "Mon": ['진로(김)', '자료구조 B', '음악', '국어(성)', '사회', '수학(류)', '과학'],
-    "Tue": ['자료구조 B', '자료구조 B', '영어(공)', '컴일', '국어(성)', 'CA', 'CA'],
-    "Wed": ['수학(류)', '체육', '자료구조 A', '사회', '영어(공)', '과학', ''],
-    "Thu": ['음악', '국어(성)', '과학', '컴일', '자료구조 A', '자료구조 A', 'HR'],
-    "Fri": ['사회', '컴일', '음악', '영어(공)', '체육', '수학(류)', '자료구조 A'],
+    "Mon": ['컴일(조)', '컴일(조)', 'IOT(하)', '수학(류)', '음악(이)', '영어(양)', 'HR'],
+    "Tue": ['통과(전)', '수학(류)', '음악(이)', '체육(김)', '플밍(김)', '플밍(김)', '국어(허)'],
+    "Wed": ['영어(양)', '사회(이)', '국어(허)', '컴일(조)', '진로(호)', 'CA', ''],
+    "Thu": ['플밍(김)', '플밍(김)', '수학(류)', '사회(이)', 'IOT(하)', 'IOT(하)', '통과(전)'],
+    "Fri": ['영어(양)', '통과(전)', '음악(이)', '국어(허)', '체육(김)', '사회(이)', '진로(호)'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
   "1-5": {
-    "Mon": ['자료구조 B', '과학', '사회', '수학(이)', '자료구조 A', '체육', '국어(성)'],
-    "Tue": ['컴일', '미술', '미술', '영어(공)', '수학(이)', 'CA', 'CA'],
-    "Wed": ['사회', '컴일', '과학', '미술', '체육', '국어(성)', ''],
-    "Thu": ['진로(김)', '자료구조 A', '자료구조 B', '자료구조 B', '과학', '영어(공)', 'HR'],
-    "Fri": ['자료구조 A', '자료구조 A', '수학(이)', '사회', '컴일', '국어(성)', '영어(전)'],
+    "Mon": ['미술(전)', '사회(이)', '수학(류)', '영어(양)', '국어(허)', 'IOT(하)', 'HR'],
+    "Tue": ['IOT(하)', 'IOT(하)', '영어(양)', '통과(전)', '수학(류)', '사회(이)', '체육(김)'],
+    "Wed": ['컴일(조)', '컴일(조)', '플밍(김)', '플밍(김)', '국어(허)', 'CA', ''],
+    "Thu": ['통과(전)', '미술(전)', '체육(김)', '영어(양)', '플밍(김)', '플밍(김)', '진로(공)'],
+    "Fri": ['국어(허)', '사회(이)', '수학(류)', '컴일(조)', '통과(전)', '진로(공)', '미술(전)'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
   "1-6": {
-    "Mon": ['수학(이)', '미술', '국어(성)', '과학', '체육', '영어(공)', '자료구조 A'],
-    "Tue": ['사회', '자료구조 A', '자료구조 A', '국어(성)', '진로(김)', 'CA', 'CA'],
-    "Wed": ['자료구조 B', '자료구조 B', '사회', '자료구조 A', '컴일', '체육', ''],
-    "Thu": ['영어(공)', '컴일', '미술', '미술', '수학(이)', '과학', 'HR'],
-    "Fri": ['과학', '수학(이)', '국어(성)', '자료구조 B', '사회', '영어(전)', '컴일'],
-    "Sat": ['No Schedule'],
-    "Sun": ['No Schedule']
-  },
-  "2-3": {
-    "Mon": ['중국어', '성직', '응화', '영어(이)', '화학1', '정통', '수학2'],
-    "Tue": ['공수(이)', '운건', '수학2', '응화', '정통', '진로(박)', 'CA'],
-    "Wed": ['응프', '응프', '진로(박)', '공수(이)', '자구', '화학1', ''],
-    "Thu": ['응프', '응프', '화학1', '문학', '수학2', '공수(이)', 'HR'],
-    "Fri": ['영어(이)', '화학1', '자구', '문학', '중국어', '성직', '운건'],
+    "Mon": ['플밍(김)', '플밍(김)', '국어(허)', '과학(전)', '미술(전)', '체육(김)', 'HR'],
+    "Tue": ['수학(류)', '국어(허)', '미술(전)', '사회(이)', '진로(상)', '컴일(조)', '영어(양)'],
+    "Wed": ['과학(전)', 'IOT(하)', 'IOT(하)', '수학(류)', '체육(김)', 'CA', ''],
+    "Thu": ['IOT(하)', '국어(허)', '사회(이)', '수학(류)', '컴일(조)', '컴일(조)', '영어(양)'],
+    "Fri": ['사회(이)', '미술(전)', '플밍(김)', '플밍(김)', '영어(양)', '과학(전)', '진로(상)'],
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   }
@@ -145,27 +116,9 @@ const initialize = () => {
 
 const loop = () => {
   setTimeout(loop, 1000);
-  if(className == "1-4") {
-    links["CA"] = links["화학1"];
-    links["HR"] = links["화학1"];
-  } else if(className == "1-3") {
-    links["CA"] = links["자료구조 A"];
-    links["HR"] = links["자료구조 A"];
-  } else if(className == "1-1") {
-    links["CA"] = links["영어(공)"];
-    links["HR"] = links["영어(공)"];
-  } else if(className == "1-2") {
-    links["CA"] = links["수학(류)"];
-    links["HR"] = links["수학(류)"];
-  } else if(className == "1-5") {
-    links["CA"] = links["음악"];
-    links["HR"] = links["음악"];
-  } else if(className == "1-6") {
-    links["CA"] = links["사회"];
-    links["HR"] = links["사회"];
-  } else if(className == "2-3") {
-    links["CA"] = links["공수(이)"];
-    links["HR"] = links["공수(이)"];
+  if(className == "1-3") {
+    links["CA"] = links["통과(전)"];
+    links["HR"] = links["통과(전)"];
   }
   const d = new Date();
   todaySchedule = schedule[className][days[d.getDay()]];
@@ -173,35 +126,6 @@ const loop = () => {
     noSchedule();
     return;
   }
-
-  //방과후 대응//
-  if(d.getDate() < 22) {
-    if(className == "1-4" || className == "1-3" || className == "1-2") {
-      todaySchedule[0] = '수학(류)';
-      todaySchedule[1] = '영어(공)';
-      todaySchedule[2] = '국어(성)';
-    } else {
-      todaySchedule[0] = '영어(공)';
-      todaySchedule[1] = '국어(성)';
-      todaySchedule[2] = '수학(이)';
-    }
-  } else {
-    if(className == "1-4" || className == "1-3" || className == "1-2") {
-      todaySchedule[0] = '영어(공)';
-      todaySchedule[1] = '국어(성)';
-      todaySchedule[2] = '수학(류)';
-    } else {
-      todaySchedule[0] = '수학(이)';
-      todaySchedule[1] = '영어(공)';
-      todaySchedule[2] = '국어(성)';
-    }
-  }
-  todaySchedule[3] = '';
-  todaySchedule[4] = '';
-  todaySchedule[5] = '';
-  todaySchedule[6] = '';
-  //방과후 대응//
-
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
     elements[i].textContent = todaySchedule[i];
@@ -209,15 +133,15 @@ const loop = () => {
   }
   let hour = d.getHours();
   let min = d.getMinutes();
-  if(hour <= 8 && min < 55) {
+  if(hour < 8) {
     document.getElementsByTagName('h2')[0].innerHTML = '아직 리잠 잘 시간이야..';
-  }/* else if(hour <= 8 && min < 45) {
+  } else if(hour <= 8 && min < 45) {
     updateH2('조례', links.HR, true);
     redirect(links.HR, '조례');
   } else if(hour == 8 && min < 58) {
     updateH2('조례', links.HR, false);
     redirect(links.HR, '조례');
-  }*/ else if(hour == 8) {
+  } else if(hour == 8) {
     elements[0].classList.add('selected');
     updateH2(todaySchedule[0], links[todaySchedule[0]], true);
     redirect(links[todaySchedule[0]], todaySchedule[0]);
@@ -245,53 +169,7 @@ const loop = () => {
     elements[2].classList.add('selected');
     updateH2(todaySchedule[2], links[todaySchedule[2]], false);
     redirect(links[todaySchedule[2]], todaySchedule[2]);
-
-  //방과후 대응//
-  } else if(hour == 11 || (hour == 12 && min < 45)) {
-    document.getElementsByTagName('h2')[0].innerHTML = '점심시간 !';
-  } else if(hour == 12 || (hour <= 13 && min < 40)) {
-    document.getElementsByTagName('h2')[0].innerHTML = '방과후 오후 수업은 수동 선택이 필요합니다.<br>아래에서 수업을 클릭해주세요.';
-    elements[0].textContent = '국어문법';
-    elements[1].textContent = '무한의신비';
-    todaySchedule[0] = '국어문법';
-    todaySchedule[1] = '무한의신비';
-    if(d.getDay() == 1 || d.getDay() == 3 || d.getDay() == 5) {
-      elements[2].textContent = '데이터분석';
-      todaySchedule[2] = '데이터분석';
-    } else {
-      elements[2].textContent = '3D애니메이션';
-      todaySchedule[3] = '3D애니메이션';
-    }
-  } else if(hour == 13 || (hour <= 14 && min < 40)) {
-    document.getElementsByTagName('h2')[0].innerHTML = '방과후 오후 수업은 수동 선택이 필요합니다.<br>아래에서 수업을 클릭해주세요.';
-    elements[0].textContent = '수능문학';
-    elements[1].textContent = '행렬론';
-    todaySchedule[0] = '수능문학';
-    todaySchedule[1] = '행렬론';
-    if(d.getDay() == 1 || d.getDay() == 3 || d.getDay() == 5) {
-      elements[2].textContent = '데이터분석';
-      todaySchedule[2] = '데이터분석';
-    } else {
-      elements[2].textContent = '3D애니메이션';
-      todaySchedule[3] = '3D애니메이션';
-    }
-  } else if(hour == 14 || (hour <= 15 && min < 40)) {
-    document.getElementsByTagName('h2')[0].innerHTML = '방과후 오후 수업은 수동 선택이 필요합니다.<br>아래에서 수업을 클릭해주세요.';
-    elements[0].textContent = '상업경제';
-    elements[1].textContent = '중국어';
-    todaySchedule[0] = '상업경제';
-    todaySchedule[1] = '중국어';
-    if(d.getDay() == 1 || d.getDay() == 3 || d.getDay() == 5) {
-      elements[2].textContent = '데이터분석';
-      todaySchedule[2] = '데이터분석';
-    } else {
-      elements[2].textContent = '3D애니메이션';
-      todaySchedule[3] = '3D애니메이션';
-    }
-  }
-  //방과후 대응//
-
-  /* else if(hour == 11) {
+  } else if(hour == 11) {
     elements[3].classList.add('selected');
     updateH2(todaySchedule[3], links[todaySchedule[3]], true);
     if(min >= 55) {
@@ -347,7 +225,7 @@ const loop = () => {
   } else if(hour == 16) {
     updateH2('종례', links.HR, false);
     redirect(links.HR, '종례');
-  }*/ else {
+  } else {
     document.getElementsByTagName('h2')[0].innerHTML = '수업끝 !!';
     recentName = '';
   }
@@ -371,7 +249,7 @@ const noSchedule = () => {
 
 const scheduleClicked = n => {
   explanation.textContent = '링크를 실행하는 중..';
-  call(links[document.getElementsByClassName('schedule')[n].textContent]);
+  call(links[todaySchedule[n]]);
 };
 
 const redirect = (link, name) => {
