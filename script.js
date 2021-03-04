@@ -116,7 +116,7 @@ const initialize = () => {
 
 const loop = () => {
   setTimeout(loop, 1000);
-  if(className == "1-3") {
+  if(className == "1-4") {
     links["CA"] = links["통과(전)"];
     links["HR"] = links["통과(전)"];
   }
