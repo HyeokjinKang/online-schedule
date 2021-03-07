@@ -102,14 +102,27 @@ a {
   margin-top: 48px;
 }
 
-#copyright {
-  font-weight: 700;
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
   position: fixed;
   bottom: 0;
   right: 0;
+}
+
+#asdf {
+  display: none;
+  width: 15vw;
+  margin-right: 1vw;
+}
+
+#copyright {
+  font-weight: 700;
   color: #ddd;
   font-size: 3vh;
-  text-align: right;
   margin: 2vh;
 }
 
