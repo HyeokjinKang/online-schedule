@@ -18,6 +18,10 @@ a {
 }
 
 #dropdownContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 2vh;
   left: 2vw;
@@ -113,12 +117,6 @@ a {
   right: 0;
 }
 
-#asdf {
-  display: none;
-  width: 15vw;
-  margin-right: 1vw;
-}
-
 #copyright {
   font-weight: 700;
   color: #ddd;
@@ -136,4 +134,13 @@ a {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+.classSelect {
+  color: #bbb;
+  cursor: pointer;
+}
+
+.classSelect.true {
+  color: #666;
 }

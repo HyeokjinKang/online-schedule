@@ -19,7 +19,28 @@ const links = {
   "컴일(조)": "3650046422&pwd=dimigo",
   "진로(전)": "7385237525&pwd=dimigo",
   "진로(호)": "5363759347&pwd=dimigo",
-  "진로(신)": "TODO"
+  "진로(신)": "TODO",
+  "정통(박)": "3335559622?pwd=dimigo",
+  "빅데(하)": "3053522072?pwd=dimigo",
+  "영어(이)": "7126847915?pwd=dimigo",
+  "마광(정)": "3154650453?pwd=dimigo",
+  "중국어(정)": "7722593481?pwd=dimigo",
+  "진로(정)": "7722593481?pwd=dimigo",
+  "한국사(박)": "3955689232?pwd=dimigo",
+  "공수(이)": "8792076928?pwd=dimigo",
+  "수학(이)": "8792076928?pwd=dimigo",
+  "문학(김)": "8134411742?pwd=dimigo",
+  "화학(김)": "4361766687?pwd=dimigo",
+  "정처(이)": "5363759347?pwd=dimigo",
+  "플밍(임)": "4679526373?pwd=py2020",
+  "수학(장)": "7965443330?pwd=dimigo",
+  "진로(전)": "5135798594?pwd=dimigo",
+  "정보관(이)": "https://bit.ly/34rBBfM",
+  "성직(이)": "https://bit.ly/34rBBfM",
+  "광고(정)": "https://discord.com/invite/VRRDcsMF",
+  "운동(이)": "3490119479?pwd=dimigo",
+  "응화(마)": "2121961647?pwd=dimigo",
+  "회계(최)": "5379758850?pwd=dimigo"
 };
 
 const schedule = {
@@ -77,6 +98,60 @@ const schedule = {
     "Sat": ['No Schedule'],
     "Sun": ['No Schedule']
   },
+  "2-1": {
+    "Mon": ['중국어(정)', '마광(정)', '플밍(임)', '영어(이)', '수학(이)', '진로(진)', 'HR'],
+    "Tue": ['수학(이)', '마광(정)', '운동(이)', '문학(김)', '플밍(임)', '회계(최)', '회계(최)'],
+    "Wed": ['마광(정)', '정처(이)', '정처(이)', '진로(전)', '중국어(정)', 'CA', ''],
+    "Thu": ['플밍(임)', '영어(이)', '수학(이)', '중국어(정)', '문학(김)', '회계(최)', '회계(최)'],
+    "Fri": ['정처(이)', '정처(이)', '문학(김)', '운동(이)', '마광(정)', '플밍(임)', '영어(이)'],
+    "Sat": ['No Schedule'],
+    "Sun": ['No Schedule']
+  },
+  "2-2": {
+    "Mon": ['수학(장)', '중국어(정)', '음악(이)', '마광(정)', '운동(이)', '영어(이)', 'HR'],
+    "Tue": ['회계(최)', '회계(최)', '문학(김)', '중국어(정)', '음악(이)', '수학(장)', '마광(정)'],
+    "Wed": ['문학(김)', '광고(정)', '광고(정)', '마광(정)', '영어(이)', 'CA', ''],
+    "Thu": ['음악(이)', '문학(김)', '진로(정)', '운동(이)', '영어(이)', '수학(장)', '중국어(정)'],
+    "Fri": ['광고(정)', '광고(정)', '회계(최)', '회계(최)', '진로(정)', '음악(이)', '마광(정)'],
+    "Sat": ['No Schedule'],
+    "Sun": ['No Schedule']
+  },
+  "2-3": {
+    "Mon": ['화학(김)', '문학(김)', '공수(이)', '빅데(하)', '응화(마)', '응화(마)', 'HR'],
+    "Tue": ['수학(장)', '진로(전)', '공수(이)', '영어(이)' ,'화학(김)', '운동(이)', '성직(이)'],
+    "Wed": ['빅데(하)', '중국어(정)', '한국사(박)', '성직(이)', '공수(이)', 'CA', ''],
+    "Thu": ['수학(장)', '운동(이)', '빅데(하)', '한국사(박)', '응화(마)', '응화(마)', '화학(김)'],
+    "Fri": ['영어(이)', '문학(김)', '중국어(정)', '진로(전)', '수학(장)', '한국사(박)', '화학(김)'],
+    "Sat": ['No Schedule'],
+    "Sun": ['No Schedule']
+  },
+  "2-4": {
+    "Mon": ['문학(김)', '한국사(박)', '수학(장)', '성직(이)', '빅데(하)', '화학(김)', 'HR'],
+    "Tue": ['화학(김)', '운동(이)', '응화(마)', '응화(마)', '진로(신)', '문학(김)', '한국사(박)'],
+    "Wed": ['공수(이)', '화학(김)', '수학(장)', '한국사(박)', '빅데(하)', 'CA', ''],
+    "Thu": ['공수(이)', '빅데(하)', '화학(김)', '영어(이)', '성직(이)', '중국어(정)', '운동(이)'],
+    "Fri": ['응화(마)', '응화(마)', '영어(이)', '진로(신)', '공수(이)', '중국어(정)', '수학(장)'],
+    "Sat": ['No Schedule'],
+    "Sun": ['No Schedule']
+  },
+  "2-5": {
+    "Mon": ['공수(이)', '운동(이)', '화학(김)', '문학(김)', '정통(박)', '성직(이)', 'HR'],
+    "Tue": ['한국사(박)', '수학(장)', '정보관(이)' ,'정보관(이)', '공수(이)', '화학(김)', '중국어(정)'],
+    "Wed": ['한국사(박)', '영어(이)', '중국어(정)', '화학(김)', '정통(박)', 'CA', ''],
+    "Thu": ['영어(이)', '정통(박)', '수학(장)', '진로(전)', '화학(김)', '운동(이)', '문학(김)'],
+    "Fri": ['정보관(이)', '정보관(이)', '공수(이)', '수학(장)', '한국사(박)', '성직(이)', '진로(전)'],
+    "Sat": ['No Schedule'],
+    "Sun": ['No Schedule']
+  },
+  "2-6": {
+    "Mon": ['정보관(이)', '정보관(이)', '진로(전)', '정통(박)', '화학(김)', '문학(김)', 'HR'],
+    "Tue": ['중국어(정)', '화학(김)', '영어(이)', '수학(장)', '진로(전)', '한국사(박)', '공수(이)'],
+    "Wed": ['정통(박)', '문학(김)', '운동(이)', '수학(장)', '화학(김)', 'CA'],
+    "Thu": ['정보관(이)', '정보관(이)', '정통(박)', '성직(이)', '한국사(박)', '공수(이)', '수학(장)'],
+    "Fri": ['중국어(정)', '한국사(박)', '운동(이)', '성직(이)', '화학(김)', '영어(이)', '공수(이)'],
+    "Sat": ['No Schedule'],
+    "Sun": ['No Schedule']
+  }
 };
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -97,7 +172,7 @@ const isMobile = () => {
 	}
 };
 
-const initialize = () => {
+const initialize = (updateOnly) => {
   if(localStorage.getItem('class') == null) {
     document.getElementsByTagName('h2')[0].innerHTML = '반을 선택해주세요.';
     return;
@@ -112,7 +187,7 @@ const initialize = () => {
       classSelector.selectedIndex = i;
     }
   }
-  loop();
+  if(!updateOnly) loop();
 };
 
 const loop = () => {
@@ -132,9 +207,27 @@ const loop = () => {
   } else if(className == "1-5") {
     links["CA"] = links["국어(허)"];
     links["HR"] = links["국어(허)"];
-  } else if(className = "1-6") {
+  } else if(className == "1-6") {
     links["CA"] = links["사회(이)"];
     links["HR"] = links["사회(이)"];
+  } else if(className == "2-1") {
+    links["CA"] = links["마광(정)"];
+    links["HR"] = links["마광(정)"];
+  } else if(className == "2-2") {
+    links["CA"] = links["중국어(정)"];
+    links["HR"] = links["중국어(정)"];
+  } else if(className == "2-3") {
+    links["CA"] = links["한국사(박)"];
+    links["HR"] = links["한국사(박)"];
+  } else if(className == "2-4") {
+    links["CA"] = links["공수(이)"];
+    links["HR"] = links["공수(이)"];
+  } else if(className == "2-5") {
+    links["CA"] = links["문학(김)"];
+    links["HR"] = links["문학(김)"];
+  } else if(className == "2-6") {
+    links["CA"] = links["화학(김)"];
+    links["HR"] = links["화학(김)"];
   }
   const d = new Date();
   todaySchedule = schedule[className][days[d.getDay()]];
@@ -144,7 +237,35 @@ const loop = () => {
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
-    elements[i].textContent = todaySchedule[i];
+    let inner = '';
+    if(todaySchedule[i] == "정처(이)" || todaySchedule[i] == "광고(정)") {
+      elements[i].style.cursor = "default";
+      inner = `<span class="classSelect ${localStorage.getItem('1-a-1') == "true"}" onclick="classClicked('1-a-1', true, ${i})">정처(이)</span> | <span class="classSelect ${localStorage.getItem('1-a-1') != "true"}" onclick="classClicked('1-a-1', false, ${i})">광고(정)</span>`;
+      if(localStorage.getItem('1-a-1')) {
+        todaySchedule[i] = localStorage.getItem('1-a-1') == "true" ? "정처(이)" : "광고(정)";
+      }
+    } else if(todaySchedule[i] == "플밍(임)" || todaySchedule[i] == "음악(이)") {
+      elements[i].style.cursor = "default";
+      inner = `<span class="classSelect ${localStorage.getItem('1-a-2') == "true"}" onclick="classClicked('1-a-2', true, ${i})">플밍(임)</span> | <span class="classSelect ${localStorage.getItem('1-a-2') != "true"}" onclick="classClicked('1-a-2', false, ${i})">음악(이)</span>`;
+      if(localStorage.getItem('1-a-2')) {
+        todaySchedule[i] = localStorage.getItem('1-a-2') == "true" ? "플밍(임)" : "음악(이)";
+      }
+    } else if(todaySchedule[i] == "응화(마)" || todaySchedule[i] == "정보관(이)") {
+      elements[i].style.cursor = "default";
+      inner = `<span class="classSelect ${localStorage.getItem('1-b') == "true"}" onclick="classClicked('1-b', true, ${i})">응화(마)</span> | <span class="classSelect ${localStorage.getItem('1-b') != "true"}" onclick="classClicked('1-b', false, ${i})">정보관(이)</span>`;
+      if(localStorage.getItem('1-b')) {
+        todaySchedule[i] = localStorage.getItem('1-b') == "true" ? "응화(마)" : "정보관(이)";
+      }
+    } else if(todaySchedule[i] == "빅데(하)" || todaySchedule[i] == "정통(박)") {
+      elements[i].style.cursor = "default";
+      inner = `<span class="classSelect ${localStorage.getItem('2') == "true"}" onclick="classClicked('2', true, ${i})">빅데(하)</span> | <span class="classSelect ${localStorage.getItem('2') != "true"}" onclick="classClicked('2', false, ${i})">정통(박)</span>`;
+      if(localStorage.getItem('2')) {
+        todaySchedule[i] = localStorage.getItem('2') == "true" ? "빅데(하)" : "정통(박)";
+      }
+    } else {
+      inner = todaySchedule[i];
+    }
+    elements[i].innerHTML = inner;
     elements[i].classList.remove('selected');
   }
   let hour = d.getHours();
@@ -249,7 +370,12 @@ const loop = () => {
 
 const classSelected = e => {
   localStorage.setItem('class', e.value);
-  initialize();
+  if(className) {
+    initialize(true);
+  } else {
+    initialize();
+  }
+  explanation.textContent = '반영 중..';
 };
 
 const updateH2 = (className, classLink, isReady) => {
@@ -263,9 +389,21 @@ const noSchedule = () => {
   document.getElementsByTagName('h2')[0].innerHTML = '오늘은 수업이 없는 날입니다!';
 };
 
+const classClicked = (n, b, m) => {
+  if(localStorage.getItem(n) == `${b}`) {
+    explanation.textContent = '링크를 실행하는 중..';
+    call(links[document.getElementsByClassName('schedule')[m].getElementsByClassName('true')[0].textContent]);
+  } else {
+    explanation.textContent = '반영 중..';
+    localStorage.setItem(n, b);
+  }
+};
+
 const scheduleClicked = n => {
-  explanation.textContent = '링크를 실행하는 중..';
-  call(links[todaySchedule[n]]);
+  if(!document.getElementsByClassName('schedule')[n].getElementsByTagName('span').length) {
+    explanation.textContent = '링크를 실행하는 중..';
+    call(links[todaySchedule[n]]);
+  }
 };
 
 const redirect = (link, name) => {
@@ -277,9 +415,10 @@ const redirect = (link, name) => {
 const call = (link) => {
   let a = document.createElement("a");
   if(isMobile()) {
-    a.href = `https://zoom.us/j/${link}`.replace('&', '?');
+    a.target = "_blank";
+    a.href = `zoomus://zoom.us/join?confno=${link}`.replace('&', '?');
   } else {
-    a.href = `zoommtg://zoom.us/join?action=join&confno=${link}`;
+    a.href = `zoommtg://zoom.us/join?confno=${link}`;
   }
   if(link.indexOf("pwd") == -1) {
     a.target = "_blank";
