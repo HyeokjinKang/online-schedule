@@ -1,3 +1,6 @@
+class database {
+  
+}
 const links = {
   "국어(허)": "5377141697&pwd=dimigo",
   "수학(류)": "6838770867&pwd=dimigo",
@@ -364,7 +367,7 @@ const scheduleFunction= ()=> {
   });
   }
   else {
-    todaySchedule = database.schedule[className][days[(new Date()).getDay()]];
+    todaySchedule = schedule[className][days[(new Date()).getDay()]];
     console.log(todaySchedule)
   }
 }
@@ -409,41 +412,41 @@ const initialize = (updateOnly) => {
 const loop = () => {
   setTimeout(loop, 1000);
   if(className == "1-1") {
-    database.links["CA"] = database.links["상경(김)"];
-    database.links["HR"] = database.links["상경(김)"];
+    links["CA"] = links["상경(김)"];
+    links["HR"] = links["상경(김)"];
   } else if(className == "1-2") {
-    database.links["CA"] = database.links["영어(양)"];
-    database.links["HR"] = database.links["영어(양)"];
+    links["CA"] = links["영어(양)"];
+    links["HR"] = links["영어(양)"];
   } else if(className == "1-3") {
-    database.links["CA"] = database.links["음악(이)"];
-    database.links["HR"] = database.links["음악(이)"];
+    links["CA"] = links["음악(이)"];
+    links["HR"] = links["음악(이)"];
   } else if(className == "1-4") {
-    database.links["CA"] = database.links["과학(전)"];
-    database.links["HR"] = database.links["과학(전)"];
+    links["CA"] = links["과학(전)"];
+    links["HR"] = links["과학(전)"];
   } else if(className == "1-5") {
-    database.links["CA"] = database.links["국어(허)"];
-    database.links["HR"] = database.links["국어(허)"];
+    links["CA"] = links["국어(허)"];
+    links["HR"] = links["국어(허)"];
   } else if(className == "1-6") {
-    database.links["CA"] = database.links["사회(이)"];
-    database.links["HR"] = database.links["사회(이)"];
+    links["CA"] = links["사회(이)"];
+    links["HR"] = links["사회(이)"];
   } else if(className == "2-1") {
-    database.links["CA"] = database.links["마광(정)"];
-    database.links["HR"] = database.links["마광(정)"];
+    links["CA"] = links["마광(정)"];
+    links["HR"] = links["마광(정)"];
   } else if(className == "2-2") {
-    database.links["CA"] = database.links["중국어(정)"];
-    database.links["HR"] = database.links["중국어(정)"];
+    links["CA"] = links["중국어(정)"];
+    links["HR"] = links["중국어(정)"];
   } else if(className == "2-3") {
-    database.links["CA"] = database.links["한국사(박)"];
-    database.links["HR"] = database.links["한국사(박)"];
+    links["CA"] = links["한국사(박)"];
+    links["HR"] = links["한국사(박)"];
   } else if(className == "2-4") {
-    database.links["CA"] = database.links["공수(이)"];
-    database.links["HR"] = database.links["공수(이)"];
+    links["CA"] = links["공수(이)"];
+    links["HR"] = links["공수(이)"];
   } else if(className == "2-5") {
-    database.links["CA"] = database.links["문학(김)"];
-    database.links["HR"] = database.links["문학(김)"];
+    links["CA"] = links["문학(김)"];
+    links["HR"] = links["문학(김)"];
   } else if(className == "2-6") {
-    database.links["CA"] = database.links["화학(김)"];
-    database.links["HR"] = database.links["화학(김)"];
+    links["CA"] = links["화학(김)"];
+    links["HR"] = links["화학(김)"];
   }
   const d = new Date();
   scheduleFunction()
@@ -493,95 +496,95 @@ const loop = () => {
   if(hour < 8) {
     document.getElementsByTagName('h2')[0].innerHTML = '아직 리잠 잘 시간이야..';
   } else if(hour <= 8 && min < 45) {
-    updateH2('조례', database.links.HR, true);
-    redirect(database.links.HR, '조례');
+    updateH2('조례', links.HR, true);
+    redirect(links.HR, '조례');
   } else if(hour == 8 && min < 58) {
-    updateH2('조례', database.links.HR, false);
-    redirect(database.links.HR, '조례');
+    updateH2('조례', links.HR, false);
+    redirect(links.HR, '조례');
   } else if(hour == 8) {
     elements[0].classList.add('selected');
-    updateH2(todaySchedule[0], database.links[todaySchedule[0]], true);
-    redirect(database.links[todaySchedule[0]], todaySchedule[0]);
+    updateH2(todaySchedule[0], links[todaySchedule[0]], true);
+    redirect(links[todaySchedule[0]], todaySchedule[0]);
   } else if(hour <= 9 && min < 50) {
     elements[0].classList.add('selected');
-    updateH2(todaySchedule[0], database.links[todaySchedule[0]], false);
-    redirect(database.links[todaySchedule[0]], todaySchedule[0]);
+    updateH2(todaySchedule[0], links[todaySchedule[0]], false);
+    redirect(links[todaySchedule[0]], todaySchedule[0]);
   } else if(hour == 9) {
     elements[1].classList.add('selected');
-    updateH2(todaySchedule[1], database.links[todaySchedule[1]], true);
+    updateH2(todaySchedule[1], links[todaySchedule[1]], true);
     if(min >= 55) {
-      redirect(database.links[todaySchedule[1]], todaySchedule[1]);
+      redirect(links[todaySchedule[1]], todaySchedule[1]);
     }
   } else if(hour <= 10 && min < 50) {
     elements[1].classList.add('selected');
-    updateH2(todaySchedule[1], database.links[todaySchedule[1]], false);
-    redirect(database.links[todaySchedule[1]], todaySchedule[1]);
+    updateH2(todaySchedule[1], links[todaySchedule[1]], false);
+    redirect(links[todaySchedule[1]], todaySchedule[1]);
   } else if(hour == 10) {
     elements[2].classList.add('selected');
-    updateH2(todaySchedule[2], database.links[todaySchedule[2]], true);
+    updateH2(todaySchedule[2], links[todaySchedule[2]], true);
     if(min >= 55) {
-      redirect(database.links[todaySchedule[2]], todaySchedule[2]);
+      redirect(links[todaySchedule[2]], todaySchedule[2]);
     }
   } else if(hour <= 11 && min < 50) {
     elements[2].classList.add('selected');
-    updateH2(todaySchedule[2], database.links[todaySchedule[2]], false);
-    redirect(database.links[todaySchedule[2]], todaySchedule[2]);
+    updateH2(todaySchedule[2], links[todaySchedule[2]], false);
+    redirect(links[todaySchedule[2]], todaySchedule[2]);
   } else if(hour == 11) {
     elements[3].classList.add('selected');
-    updateH2(todaySchedule[3], database.links[todaySchedule[3]], true);
+    updateH2(todaySchedule[3], links[todaySchedule[3]], true);
     if(min >= 55) {
-      redirect(database.links[todaySchedule[3]], todaySchedule[3]);
+      redirect(links[todaySchedule[3]], todaySchedule[3]);
     }
   } else if(hour <= 12 && min < 50) {
     elements[3].classList.add('selected');
-    updateH2(todaySchedule[3], database.links[todaySchedule[3]], false);
-    redirect(database.links[todaySchedule[3]], todaySchedule[3]);
+    updateH2(todaySchedule[3], links[todaySchedule[3]], false);
+    redirect(links[todaySchedule[3]], todaySchedule[3]);
   } else if(hour == 12 || (hour == 13 && min < 40)) {
     document.getElementsByTagName('h2')[0].innerHTML = '점심시간 !';
   } else if(hour == 13 && min < 50) {
     elements[4].classList.add('selected');
-    updateH2(todaySchedule[4], database.links[todaySchedule[4]], true);
+    updateH2(todaySchedule[4], links[todaySchedule[4]], true);
     if(min >= 45) {
-      redirect(database.links[todaySchedule[4]], todaySchedule[4]);
+      redirect(links[todaySchedule[4]], todaySchedule[4]);
     }
   } else if(hour == 13 || (hour <= 14 && min < 40)) {
     elements[4].classList.add('selected');
-    updateH2(todaySchedule[4], database.links[todaySchedule[4]], false);
-    redirect(database.links[todaySchedule[4]], todaySchedule[4]);
+    updateH2(todaySchedule[4], links[todaySchedule[4]], false);
+    redirect(links[todaySchedule[4]], todaySchedule[4]);
   } else if(hour == 14 && min < 50) {
     elements[5].classList.add('selected');
-    updateH2(todaySchedule[5], database.links[todaySchedule[5]], true);
+    updateH2(todaySchedule[5], links[todaySchedule[5]], true);
     if(min >= 45) {
-      redirect(database.links[todaySchedule[5]], todaySchedule[5]);
+      redirect(links[todaySchedule[5]], todaySchedule[5]);
     }
   } else if(hour == 14 || (hour <= 15 && min < 40)) {
     elements[5].classList.add('selected');
-    updateH2(todaySchedule[5], database.links[todaySchedule[5]], false);
-    redirect(database.links[todaySchedule[5]], todaySchedule[5]);
+    updateH2(todaySchedule[5], links[todaySchedule[5]], false);
+    redirect(links[todaySchedule[5]], todaySchedule[5]);
   } else if(hour == 15 && min < 50) {
     if(todaySchedule[6] != '') {
       elements[6].classList.add('selected');
-      updateH2(todaySchedule[6], database.links[todaySchedule[6]], true);
+      updateH2(todaySchedule[6], links[todaySchedule[6]], true);
       if(min >= 45) {
-        redirect(database.links[todaySchedule[6]], todaySchedule[6]);
+        redirect(links[todaySchedule[6]], todaySchedule[6]);
       }
     } else {
-      updateH2('종례', database.links.HR, true);
+      updateH2('종례', links.HR, true);
     }
   } else if(hour == 15 || (hour <= 16 && min < 40)) {
     if(todaySchedule[6] != '') {
       elements[6].classList.add('selected');
-      updateH2(todaySchedule[6], database.links[todaySchedule[6]], false);
-      redirect(database.links[todaySchedule[6]], todaySchedule[6]);
+      updateH2(todaySchedule[6], links[todaySchedule[6]], false);
+      redirect(links[todaySchedule[6]], todaySchedule[6]);
     } else {
-      updateH2('종례', database.links.HR, true);
+      updateH2('종례', links.HR, true);
     }
   } else if(hour == 16 && min < 45) {
-    updateH2('종례', database.links.HR, true);
-    redirect(database.links.HR, '종례');
+    updateH2('종례', links.HR, true);
+    redirect(links.HR, '종례');
   } else if(hour == 16) {
-    updateH2('종례', database.links.HR, false);
-    redirect(database.links.HR, '종례');
+    updateH2('종례', links.HR, false);
+    redirect(links.HR, '종례');
   } else {
     document.getElementsByTagName('h2')[0].innerHTML = '수업끝 !!';
     recentName = '';
@@ -624,7 +627,7 @@ const noSchedule = () => {
 const classClicked = (n, b, m) => {
   if(localStorage.getItem(n) == `${b}`) {
     explanation.textContent = '링크를 실행하는 중..';
-    call(database.links[document.getElementsByClassName('schedule')[m].getElementsByClassName('true')[0].textContent]);
+    call(links[document.getElementsByClassName('schedule')[m].getElementsByClassName('true')[0].textContent]);
   } else {
     explanation.textContent = '반영 중..';
     localStorage.setItem(n, b);
@@ -634,7 +637,7 @@ const classClicked = (n, b, m) => {
 const scheduleClicked = n => {
   if(!document.getElementsByClassName('schedule')[n].getElementsByTagName('span').length) {
     explanation.textContent = '링크를 실행하는 중..';
-    call(database.links[todaySchedule[n]]);
+    call(links[todaySchedule[n]]);
   }
 };
 
