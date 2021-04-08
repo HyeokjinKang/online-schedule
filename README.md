@@ -14,6 +14,9 @@
 
 일단 한 번 정해두면 `localStorage`에 저장되므로 다시 지정해 줄 필요가 없습니다✨
 
+이제 [`DIMIGOIN`](https://github.com/dimigoin)의 시간표를 `Online-schedule`에서 사용할 수 있어요!<br>
+좌측 상단 토글 스위치로 기존 방법과 새로운 방법을 자유롭게 선택할 수 있습니다✨
+
 ## Build manual
 
 빌드 할 필요가 없습니다!   
