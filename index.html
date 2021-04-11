@@ -32,9 +32,18 @@
       <option>2-5</option>
       <option>2-6</option>
     </select>
+    <span id="toggleSwitch">
+      <label class="switch">
+        <input id= 'APItoggle' type="checkbox" checked onchange="toggleChanged(this)">
+        <span class="slider"></span>
+      </label>
+      <span id="toggleText">
+      </span>
+    </span>
   </div>
   <div id="titleContainer">
     <h1 id="title">오늘의 시간표</h1>
+    <h2 id="noti"> </h2>
     <h2 id="explanation">지금 수업중 : <span></span>, <a></a></h2>
   </div>
   <div id="tableContainer">
