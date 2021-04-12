@@ -151,7 +151,7 @@ a {
 /* The switch - the box around the slider */
 #switchContainer {
   color: #999;
-  font-size: 1.5vh;
+  font-size: 1.7vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
