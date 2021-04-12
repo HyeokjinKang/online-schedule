@@ -343,36 +343,32 @@ const teachers= {
 };
 
 let todaySchedule = [];
-const scheduleFunction= ()=> {
-  if(localStorage.getItem('APIenable') == 'true') {
-    let classData= localStorage.getItem('class').split('-')
-    fetch(`https://api.dimigo.in/timetable/weekly/grade/${classData[0]}/class/${classData[1]}`, {
-      method: 'GET',
-    })
-    .then(data => data.json())
-    .then(data => {
-      todaySchedule= (data.timetable[(new Date()).getDay()-1].sequence)
-      console.log(todaySchedule)
-      if(todaySchedule[0] == "쉬는 날"){ todaySchedule= ["No Schedule"]; }
-      else{
-        for (let i= 0; i<todaySchedule.length; i++){
-          if(todaySchedule[i][0]== '*'){  //변동 시간표는 앞에 *이 붙음. 그걸 제거해줌
-            todaySchedule[i]= todaySchedule[i].substr(2);
-          }
-          todaySchedule[i]= teachers[localStorage.getItem('class')][todaySchedule[i]];
+const scheduleFunction= () => {
+  let classData = localStorage.getItem('class').split('-');
+  fetch(`https://api.dimigo.in/timetable/weekly/grade/${classData[0]}/class/${classData[1]}`, {
+    method: 'GET',
+  })
+  .then(data => data.json())
+  .then(data => {
+    todaySchedule = (data.timetable[(new Date()).getDay()-1].sequence);
+    if(todaySchedule[0] == "쉬는 날") {
+      todaySchedule = ["No Schedule"];
+    } else {
+      for (let i = 0; i<todaySchedule.length; i++) {
+        if(todaySchedule[i][0] == '*'){  //변동 시간표는 앞에 *이 붙음. 그걸 제거해줌
+          todaySchedule[i] = todaySchedule[i].substr(2);
         }
+        todaySchedule[i] = teachers[localStorage.getItem('class')][todaySchedule[i]];
       }
+    }
   });
-  }
-  else {
-    todaySchedule = schedule[className][days[(new Date()).getDay()]];
-    console.log(todaySchedule)
-  }
 }
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let className = '';
 let recentName = '';
+
+let scheduleInterval;
 
 document.addEventListener("DOMContentLoaded", () => {
   initialize();
@@ -392,9 +388,6 @@ const initialize = (updateOnly) => {
     document.getElementById('explanation').innerHTML = '반을 선택해주세요.';
     return;
   }
-  if(localStorage.getItem('APIenable') == 'false'){
-    document.getElementById('APItoggle').checked = false;
-  }
   className = localStorage.getItem('class');
   let elements = document.getElementsByTagName('option');
   if(elements[0].value == '선택해주세요') {
@@ -405,8 +398,18 @@ const initialize = (updateOnly) => {
       classSelector.selectedIndex = i;
     }
   }
+  if(localStorage.getItem('APIenable') == 'false') {
+    document.getElementById('APItoggle').checked = false;
+    switchExplanation.textContent = "로컬 시간표 사용중";
+    todaySchedule = schedule[className][days[(new Date()).getDay()]];
+  } else {
+    switchExplanation.textContent = "디미고인 시간표 사용중";
+    scheduleFunction();
+    if(!updateOnly) scheduleInterval = setInterval(scheduleFunction, 600000);
+  }
   if(!updateOnly) loop();
 };
+
 const loop = () => {
   setTimeout(loop, 1000);
   if(className == "1-1") {
@@ -447,7 +450,6 @@ const loop = () => {
     links["HR"] = links["화학(김)"];
   }
   const d = new Date();
-  scheduleFunction()
   if(todaySchedule[0] == 'No Schedule') {
     noSchedule();
     return;
@@ -601,14 +603,15 @@ const classSelected = e => {
 
 const toggleChanged = e => {
   localStorage.setItem('APIenable', e.checked);
-  if(e.checked){
-    noti.textContent = '이제 디미고인 시간표를 사용합니다';
+  if(e.checked) {
+    switchExplanation.textContent = "디미고인 시간표 사용중";
+    scheduleFunction();
+    scheduleInterval = setInterval(scheduleFunction, 600000);
+  } else {
+    switchExplanation.textContent = "로컬 시간표 사용중";
+    clearInterval(scheduleInterval);
+    todaySchedule = schedule[className][days[(new Date()).getDay()]];
   }
-  else{
-    noti.textContent = '이제 로컬 시간표를 사용합니다';
-  }
-  setTimeout(()=> { noti.textContent= " "; }, 3000 );
-  scheduleFunction();
 }
 
 const updateH2 = (className, classLink, isReady) => {
