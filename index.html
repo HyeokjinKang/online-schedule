@@ -13,7 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Schedule</title>
-  <link rel="stylesheet" href="style.css?pub=15.0">
+  <link rel="stylesheet" href="style.css?pub=15.3">
 </head>
 <body>
   <div id="dropdownContainer">
@@ -32,18 +32,18 @@
       <option>2-5</option>
       <option>2-6</option>
     </select>
+  </div>
+  <div id="switchContainer">
     <span id="toggleSwitch">
       <label class="switch">
         <input id= 'APItoggle' type="checkbox" checked onchange="toggleChanged(this)">
         <span class="slider"></span>
       </label>
-      <span id="toggleText">
-      </span>
     </span>
+    <span id="switchExplanation"></span>
   </div>
   <div id="titleContainer">
     <h1 id="title">오늘의 시간표</h1>
-    <h2 id="noti"> </h2>
     <h2 id="explanation">지금 수업중 : <span></span>, <a></a></h2>
   </div>
   <div id="tableContainer">
@@ -86,6 +86,6 @@
   <div id="footer">
     <span id="copyright"><span>Contributors can be viewed <a href="https://github.com/HyeokjinKang/online-schedule/graphs/contributors" target="_blank">here</a>.</span><br>&copy; Copyright Coupy, 2021. All Rights Reserved.</span>
   </div>
-  <script src="./script.js?pub=15.0"></script>
+  <script src="./script.js?pub=15.3"></script>
 </body>
 </html>
