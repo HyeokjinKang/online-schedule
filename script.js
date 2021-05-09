@@ -200,6 +200,7 @@ const teachers= {
       "진로": "진로(택)",
       "IoT 서비스 모형 기획": "IOT(하)",
       "IoT 환경분석": "IOT(하)",
+      "사물": "IOT(하)",
       "수학": "수학(류)"
   },
   "1-4": {
@@ -216,6 +217,7 @@ const teachers= {
       "체육": "체육(김)",
       "IoT 서비스 모형 기획": "IOT(하)",
       "IoT 환경분석": "IOT(하)",
+      "사물": "IOT(하)",
       "수학": "수학(류)"
   },
   "1-5": {
@@ -358,11 +360,14 @@ const scheduleFunction= () => {
     if(todaySchedule[0] == "쉬는 날") {
       todaySchedule = ["No Schedule"];
     } else {
-      for (let i = 0; i<todaySchedule.length; i++) {
-        if(todaySchedule[i][0] == '*'){  //변동 시간표는 앞에 *이 붙음. 그걸 제거해줌
+      for (let i = 0; i <= 6; i++) {
+        if(todaySchedule[i] == undefined) {
+          todaySchedule[i] = "";
+        } else if(todaySchedule[i][0] == '*'){  //변동 시간표는 앞에 *이 붙음. 그걸 제거해줌
           todaySchedule[i] = todaySchedule[i].substr(2);
+        } else if(todaySchedule[i]) {
+          todaySchedule[i] = teachers[localStorage.getItem('class')][todaySchedule[i]];
         }
-        todaySchedule[i] = teachers[localStorage.getItem('class')][todaySchedule[i]];
       }
     }
   });
