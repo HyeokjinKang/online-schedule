@@ -594,6 +594,15 @@ const loop = () => {
   } else if(hour == 16) {
     updateH2('종례', links.HR, false);
     redirect(links.HR, '종례');
+  } else if(hour == 17 || hour == 18 || (hour == 19 && min < 40)) {
+    document.getElementById('explanation').innerHTML = '수업끝 !!';
+    recentName = '';
+  } else if(hour == 19 && min < 50) {
+    updateH2('전공업', '9452204777?pwd=dimigo', true);
+    redirect('9452204777?pwd=dimigo', '전공업');
+  } else if(hour < 21 || (hour == 21 && min < 50)) {
+    updateH2('전공업', '9452204777?pwd=dimigo', false);
+    redirect('9452204777?pwd=dimigo', '종례');
   } else {
     document.getElementById('explanation').innerHTML = '수업끝 !!';
     recentName = '';
