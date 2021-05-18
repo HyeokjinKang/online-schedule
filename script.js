@@ -40,7 +40,10 @@ const links = {
   "광고(정)": "https://discord.com/invite/VRRDcsMF",
   "운동(이)": "3490119479&pwd=dimigo",
   "응화(마)": "2121961647&pwd=dimigo",
-  "회계(최)": "5379758850&pwd=dimigo"
+  "회계(최)": "5379758850&pwd=dimigo",
+  "인공지능": "2803964538&pwd=dimigo",
+  "웹개발": "9452204777&pwd=dimigo",
+  "정보보안": "5848379473&pwd=dimigo"
 };
 
 const schedule = {
@@ -467,6 +470,17 @@ const loop = () => {
     explanation.textContent = '로딩중..';
     return;
   }
+  let hour = d.getHours();
+  let min = d.getMinutes();
+  if((19 <= hour && 40 <= min) || hour == 20 || (hour == 21 && min < 50)) {
+    todaySchedule[0] = "인공지능";
+    todaySchedule[1] = "웹개발";
+    todaySchedule[2] = "정보보안";
+    todaySchedule[3] = "";
+    todaySchedule[4] = "";
+    todaySchedule[5] = "";
+    todaySchedule[6] = "";
+  }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
     let inner = '';
@@ -500,8 +514,6 @@ const loop = () => {
     elements[i].innerHTML = inner;
     elements[i].classList.remove('selected');
   }
-  let hour = d.getHours();
-  let min = d.getMinutes();
   if(hour < 8) {
     document.getElementById('explanation').innerHTML = '아직 리잠 잘 시간이야..';
   } else if(hour <= 8 && min < 45) {
@@ -597,12 +609,8 @@ const loop = () => {
   } else if(hour == 17 || hour == 18 || (hour == 19 && min < 40)) {
     document.getElementById('explanation').innerHTML = '수업끝 !!';
     recentName = '';
-  } else if(hour == 19 && min < 50) {
-    updateH2('전공업', '9452204777?pwd=dimigo', true);
-    redirect('9452204777?pwd=dimigo', '전공업');
   } else if(hour < 21 || (hour == 21 && min < 50)) {
-    updateH2('전공업', '9452204777?pwd=dimigo', false);
-    redirect('9452204777?pwd=dimigo', '종례');
+    document.getElementById('explanation').innerHTML = '아래에서 수강중인 강좌를 선택해주세요.';
   } else {
     document.getElementById('explanation').innerHTML = '수업끝 !!';
     recentName = '';
@@ -635,8 +643,8 @@ const toggleChanged = e => {
 const updateH2 = (className, classLink, isReady) => {
   if(classLink.indexOf("pwd") != -1) {
     if(isMobile()) {
-      a.target = "_blank";
-      a.href = `zoomus://zoom.us/join?confno=${classLink}`.replace('&', '?');
+      classLink = "_blank";
+      classLink = `zoomus://zoom.us/join?confno=${classLink}`.replace('&', '?');
     } else {
       classLink = `zoommtg://zoom.us/join?action=join&confno=${classLink}`;
     }
