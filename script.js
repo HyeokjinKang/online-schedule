@@ -634,7 +634,12 @@ const toggleChanged = e => {
 
 const updateH2 = (className, classLink, isReady) => {
   if(classLink.indexOf("pwd") != -1) {
-    classLink = `zoommtg://zoom.us/join?action=join&confno=${classLink}`;
+    if(isMobile()) {
+      a.target = "_blank";
+      a.href = `zoomus://zoom.us/join?confno=${classLink}`.replace('&', '?');
+    } else {
+      classLink = `zoommtg://zoom.us/join?action=join&confno=${classLink}`;
+    }
   }
   document.getElementById('explanation').innerHTML = `${isReady ? '다음 수업 준비' : '지금 수업중'} : <span>${className}</span>, <a href="${classLink}" target="_blank">여기</a>를 눌러 수동접속`;
 };
