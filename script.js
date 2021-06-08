@@ -43,7 +43,21 @@ const links = {
   "회계(최)": "5379758850&pwd=dimigo",
   "인공지능": "2803964538&pwd=dimigo",
   "웹개발": "9452204777&pwd=dimigo",
-  "정보보안": "5848379473&pwd=dimigo"
+  "정보보안": "5848379473&pwd=dimigo",
+  "중급수학": "798 783 3794",
+  "교양서양사": "395 568 9232",
+  "중급중국어": "772 259 3481",
+  "문법완성반": "813 441 1742",
+  "무한의신비": "796 544 3330",
+  "고급수학": "798 783 3794",
+  "고전문학": "813 441 1742",
+  "고1수학": "796 544 3330",
+  "수능실전": "409 929 3793",
+  "전산회계": "537 975 8850",
+  "신유형국어": "813 441 1742",
+  "유형독해": "409 929 3793",
+  "ITQ엑셀": "305 352 2072",
+  "큐베이스": "https://bit.ly/34rBBfM",
 };
 
 const schedule = {
@@ -480,6 +494,43 @@ const loop = () => {
     todaySchedule[4] = "";
     todaySchedule[5] = "";
     todaySchedule[6] = "";
+  } else if((hour == 17 || (hour == 18 && min < 35))) {
+    let d = new Date().getDay();
+    switch(d) {
+      case 1:
+        todaySchedule[0] = "중급수학";
+        todaySchedule[1] = "교양서양사";
+        todaySchedule[2] = "중급중국어";
+        todaySchedule[3] = "";
+        break;
+      case 2:
+        todaySchedule[0] = "문법완성반";
+        todaySchedule[1] = "무한의신비";
+        todaySchedule[2] = "고급수학";
+        todaySchedule[3] = "";
+        break;
+      case 3:
+        todaySchedule[0] = "고전문학";
+        todaySchedule[1] = "고1수학";
+        todaySchedule[2] = "수능실전";
+        todaySchedule[3] = "전산회계";
+        break;
+      case 4:
+        todaySchedule[0] = "신유형국어";
+        todaySchedule[1] = "유형독해";
+        todaySchedule[2] = "";
+        todaySchedule[3] = "";
+        break;
+      case 5:
+        todaySchedule[0] = "ITQ엑셀";
+        todaySchedule[1] = "큐베이스";
+        todaySchedule[2] = "";
+        todaySchedule[3] = "";
+        break;
+    }
+    todaySchedule[4] = "";
+    todaySchedule[5] = "";
+    todaySchedule[6] = "";
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
@@ -606,7 +657,9 @@ const loop = () => {
   } else if(hour == 16) {
     updateH2('종례', links.HR, false);
     redirect(links.HR, '종례');
-  } else if(hour == 17 || hour == 18 || (hour == 19 && min < 40)) {
+  } else if((hour == 17 || (hour == 18 && min < 35))) {
+    document.getElementById('explanation').innerHTML = '아래에서 수강중인 강좌를 선택해주세요.';
+  } else if(hour == 18 || (hour == 19 && min < 40)) {
     document.getElementById('explanation').innerHTML = '수업끝 !!';
     recentName = '';
   } else if(hour < 21 || (hour == 21 && min < 50)) {
