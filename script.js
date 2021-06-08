@@ -495,8 +495,8 @@ const loop = () => {
     todaySchedule[5] = "";
     todaySchedule[6] = "";
   } else if((hour == 17 || (hour == 18 && min < 35))) {
-    let d = new Date().getDay();
-    switch(d) {
+    day = d.getDay();
+    switch(day) {
       case 1:
         todaySchedule[0] = "중급수학";
         todaySchedule[1] = "교양서양사";
@@ -531,6 +531,12 @@ const loop = () => {
     todaySchedule[4] = "";
     todaySchedule[5] = "";
     todaySchedule[6] = "";
+  }
+  if(d.getDate() == 9 && className == "2-4") {
+    todaySchedule[2] = "성직(이)";
+  }
+  if(d.getDate() == 10 && className == "2-4") {
+    todaySchedule[4] = "수학(장)";
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
