@@ -58,6 +58,7 @@ const links = {
   "유형독해": "4099293793&pwd=dimigo",
   "ITQ엑셀": "3053522072&pwd=dimigo",
   "큐베이스": "https://bit.ly/34rBBfM",
+  "전체조회": "https://www.youtube.com/watch?v=RQ9Sy4D38B8"
 };
 
 const schedule = {
@@ -431,7 +432,7 @@ const initialize = (updateOnly) => {
   } else {
     switchExplanation.textContent = "디미고인 시간표 사용중";
     scheduleFunction();
-    if(!updateOnly) scheduleInterval = setInterval(scheduleFunction, 600000);
+    if(!updateOnly) scheduleInterval = setInterval(scheduleFunction, 3600000);
   }
   if(!updateOnly) loop();
 };
@@ -531,12 +532,6 @@ const loop = () => {
     todaySchedule[4] = "";
     todaySchedule[5] = "";
     todaySchedule[6] = "";
-  }
-  if(d.getDate() == 9 && className == "2-4") {
-    todaySchedule[2] = "성직(이)";
-  }
-  if(d.getDate() == 10 && className == "2-4") {
-    todaySchedule[4] = "수학(장)";
   }
   let elements = document.getElementsByClassName('schedule');
   for (let i = 0; i < 7; i++) {
@@ -691,7 +686,7 @@ const toggleChanged = e => {
   if(e.checked) {
     switchExplanation.textContent = "디미고인 시간표 사용중";
     scheduleFunction();
-    scheduleInterval = setInterval(scheduleFunction, 600000);
+    scheduleInterval = setInterval(scheduleFunction, 3600000);
   } else {
     switchExplanation.textContent = "로컬 시간표 사용중";
     clearInterval(scheduleInterval);
@@ -702,7 +697,6 @@ const toggleChanged = e => {
 const updateH2 = (className, classLink, isReady) => {
   if(classLink.indexOf("pwd") != -1) {
     if(isMobile()) {
-      classLink = "_blank";
       classLink = `zoomus://zoom.us/join?confno=${classLink}`.replace('&', '?');
     } else {
       classLink = `zoommtg://zoom.us/join?action=join&confno=${classLink}`;
