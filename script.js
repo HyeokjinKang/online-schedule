@@ -434,6 +434,15 @@ const initialize = (updateOnly) => {
     document.getElementById("APItoggle").checked = false;
     switchExplanation.textContent = "로컬 시간표 사용중";
     todaySchedule = schedule[className][days[new Date().getDay()]];
+    if (new Date().getDate() == 19) {
+      todaySchedule = schedule[className]["Wed"];
+      todaySchedule[5] = "CA";
+      todaySchedule[6] = "CA";
+    } else if (new Date().getDate() == 20) {
+      todaySchedule = schedule[className]["Fri"];
+    } else if (new Date().getDate() == 21) {
+      todaySchedule = ["방학식", "방학식", "방학식", "방학식", "방학식", "방학식", "방학식"];
+    }
   } else {
     switchExplanation.textContent = "디미고인 시간표 사용중";
     scheduleFunction();
@@ -704,6 +713,15 @@ const toggleChanged = (e) => {
     switchExplanation.textContent = "로컬 시간표 사용중";
     clearInterval(scheduleInterval);
     todaySchedule = schedule[className][days[new Date().getDay()]];
+    if (new Date().getDate() == 19) {
+      todaySchedule = schedule[className]["Wed"];
+      todaySchedule[5] = "CA";
+      todaySchedule[6] = "CA";
+    } else if (new Date().getDate() == 20) {
+      todaySchedule = schedule[className]["Fri"];
+    } else if (new Date().getDate() == 21) {
+      todaySchedule = ["방학식", "방학식", "방학식", "방학식", "방학식", "방학식", "방학식"];
+    }
   }
 };
 
