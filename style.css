@@ -19,11 +19,11 @@ a {
 
 #dropdownContainer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   position: fixed;
-  top: 2vh;
+  top: 3vh;
   left: 2vw;
 }
 
@@ -146,7 +146,6 @@ a {
   color: #666;
 }
 
-
 /* Toggle switch */
 /* The switch - the box around the slider */
 #switchContainer {
@@ -186,8 +185,8 @@ a {
   background: none;
   border-radius: 10vh;
   border: 2px solid #999;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -199,8 +198,8 @@ a {
   left: 2px;
   bottom: 2px;
   background-color: #999;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -213,4 +212,13 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+#switchContainer {
+  display: none;
+}
+
+#switchExplanation {
+  color: #999;
+  font-size: 1.7vh;
 }
