@@ -232,6 +232,10 @@ const teachers = {
 
 let todaySchedule = [];
 const scheduleFunction = () => {
+  if (new Date().getDay() >= 5 || new Date().getDay() == 0) {
+    todaySchedule = ["No Schedule"];
+    return;
+  }
   let classData = localStorage.getItem("class").split("-");
   fetch(`https://api.dimigo.in/timetable/weekly/grade/${classData[0]}/class/${classData[1]}`, {
     method: "GET",
